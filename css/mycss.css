@@ -1,0 +1,26 @@
+.fa-frown-o{
+	font-size: 80px; /*Tamaño del icono*/
+}
+.fa-smile-o{
+	font-size: 80px;
+}
+.bienvenida p{
+	font-size: x-large;
+	text-align: center;
+	font-weight: bold;
+}
+#avatar{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+}
+#fotoGrande{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+#nuevaFoto{
+	width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
