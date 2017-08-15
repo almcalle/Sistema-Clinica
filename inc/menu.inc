@@ -1,5 +1,5 @@
 <header class="main-header">
-  <a href="/menu.php" class="logo">
+  <a href="menu.php" class="logo">
     <!-- LOGO -->
     <i class="fa fa-cogs"></i>
   </a>

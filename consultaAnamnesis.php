@@ -82,7 +82,7 @@ include 'inc/scripts.inc';
 <script src = "/js/jquery.dataTables.js" type="text/javascript"></script>
 <script type="text/javascript">
 function detalleAnamnesis(id){
-    var url = '/php/detalleAnamnesis.php';
+    var url = 'php/detalleAnamnesis.php';
     if(!id){
         }
         else{

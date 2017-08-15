@@ -101,7 +101,7 @@ function detalleEvaluacion(id){
 </script>
 <script type="text/javascript">
     function borrarEvaluacion(id){
-		var url = '/php/borrarEvaluacion.php';
+		var url = 'php/borrarEvaluacion.php';
 		var pregunta = confirm('¿Esta seguro de eliminar la Evaluacion?');
 		if(pregunta==true){
 			$.ajax({

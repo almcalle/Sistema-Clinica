@@ -72,7 +72,7 @@ include 'inc/inicio.inc';
 <?php
 include 'inc/scripts.inc';
 ?>
-<script src = "/js/jquery.dataTables.js" type="text/javascript"></script>
+<script src = "js/jquery.dataTables.js" type="text/javascript"></script>
 <script type="text/javascript">
     function borrarFicha(id){
 		var url = 'php/borrarFicha.php';

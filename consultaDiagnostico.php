@@ -78,7 +78,7 @@ include 'inc/scripts.inc';
 <script src = "/js/jquery.dataTables.js" type="text/javascript"></script>
 <script type="text/javascript">
 function detalleDiagnostico(id){
-    var url = '/php/detalleDiagnostico.php';
+    var url = 'php/detalleDiagnostico.php';
     if(!id){
         }
         else{

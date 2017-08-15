@@ -102,7 +102,7 @@ function detalleExamen(id){
 </script>
 <script type="text/javascript">
     function borrarExamen(id){
-		var url = '/php/borrarExamen.php';
+		var url = 'php/borrarExamen.php';
 		var pregunta = confirm('¿Esta seguro de eliminar el Examen?');
 		if(pregunta==true){
 			$.ajax({

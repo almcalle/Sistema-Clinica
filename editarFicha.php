@@ -1,7 +1,7 @@
 <?php
 require 'php/requerirUsuario.php';
 include 'inc/inicio.inc';
-?>    
+?>
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -39,7 +39,7 @@ include 'inc/inicio.inc';
           <div class="col-lg-6"><!--AQUI SE MUESTRA LA INFORMACION-->
           	<div class="registros" id="agrega-registros2"></div>
 			<center><ul class="pagination" id="pagination2"></ul></center>
-          </div>	
+          </div>
           </div>
           </section><!-- right col -->
         </div>
@@ -47,7 +47,7 @@ include 'inc/inicio.inc';
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-     
+
 <?php
 include 'inc/scripts.inc';
 ?>
@@ -56,7 +56,7 @@ include 'inc/scripts.inc';
 	var url = 'php/buscarFicha.php';
 	var buscar = document.getElementById('buscar').value;
 	if(!buscar){
-		
+
 		}
 		else{
 		$.ajax({
