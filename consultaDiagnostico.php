@@ -96,7 +96,7 @@ function detalleDiagnostico(id){
 </script>
 <script type="text/javascript">
     function borrarDiagnostico(id){
-		var url = '/php/borrarDiagnostico.php';
+		var url = 'php/borrarDiagnostico.php';
 		var pregunta = confirm('¿Esta seguro de eliminar el Diagnostico?');
 		if(pregunta==true){
 			$.ajax({

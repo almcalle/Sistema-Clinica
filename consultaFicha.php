@@ -75,7 +75,7 @@ include 'inc/scripts.inc';
 <script src = "/js/jquery.dataTables.js" type="text/javascript"></script>
 <script type="text/javascript">
     function borrarFicha(id){
-		var url = '/php/borrarFicha.php';
+		var url = 'php/borrarFicha.php';
 		var pregunta = confirm('¿Esta seguro de eliminar esta Ficha?');
 		if(pregunta==true){
 			$.ajax({

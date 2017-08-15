@@ -101,7 +101,7 @@ function detalleAnamnesis(id){
 </script>
 <script type="text/javascript">
     function borrarAnamnesis(id){
-		var url = '/php/borrarAnamnesis.php';
+		var url = 'php/borrarAnamnesis.php';
 		var pregunta = confirm('¿Esta seguro de eliminar el Anamnesis?');
 		if(pregunta==true){
 			$.ajax({
