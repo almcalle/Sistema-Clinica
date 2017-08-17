@@ -105,6 +105,20 @@
                   </a>
                 </li>
                 <!--fin dignostico-->
+                <!--Vacunas-->
+                <li class="treeview">
+                  <a href="#">
+                    <i class="fa fa-rotate-90 fa-fighter-jet"></i>
+                    <span>Vacunas</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                    <ul class="treeview-menu">
+                    <li><a href="consultaVacunas.php"><i class="fa fa-circle-o text-orange">
+                    </i> Consultar Vacunas</a>
+                  </li>
+                    </ul>
+                  </a>
+                </li>
+                <!--fin vacunas-->
                 <!--MI INSTITUCION -->
 
           </ul>

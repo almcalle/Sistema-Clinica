@@ -138,6 +138,31 @@ include 'inc/menu.inc';
         		</div>
 
         <!-- ./col -->
+
+        <!-- ./col Fichas-->
+  <div class="col-xs-6">
+    <!-- small box -->
+    <div class="small-box bg-green">
+      <div class="inner">
+      <?php
+      require 'php/conexion.php';
+      //BUSCA NUMERO DE VACUNAS
+      $consulta2 = mysql_query("select COUNT(*) from vacunas");
+      $diag=mysql_result($consulta2,0);
+      mysql_close($conexion);
+      ?>
+        <h3><?php echo $diag; ?></h3>
+
+        <p>Registros de vacunas</p>
+      </div>
+      <div class="icon">
+          <i class="fa fa-rotate-90 fa-fighter-jet"></i>
+      </div>
+      <a href="nuevaVacuna.php" class="small-box-footer">Nuevo <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+  </div>
+  <!-- ./col -->
+
 </div>
         </section><!-- right col -->
       </div>
