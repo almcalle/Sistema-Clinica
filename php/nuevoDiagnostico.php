@@ -6,7 +6,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
 $reg = mysql_num_rows($registro);
 if ($reg==0) {
 	echo"<div class=\"alert alert-block alert-info\">
-	<h4>Lo sentimos!</h4>El Registro no fue encontrado.<a href='nuevaFicha.php'> Registrar una nueva ficha?</a>
+	<h4>Lo sentimos!</h4>El Registro no fue encontrado.<a href='../nuevaFicha.php'> Registrar una nueva ficha?</a>
 	</div>";
 }
 else{
@@ -47,7 +47,7 @@ mysql_close($conexion);
           <!-- /.widget-user -->
 </div>
     </div>
-</div>
+</div>  
 <!--FIN del la ficha de consulta-->
 <div class="col-lg-12">
   <div class="box box-primary">

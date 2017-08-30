@@ -1,7 +1,7 @@
 <?php
-require 'php/requerirUsuario.php';
-include 'inc/inicio.inc';
-?>
+require '/php/requerirUsuario.php';
+include '/inc/inicio.inc';
+?>    
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -19,7 +19,7 @@ include 'inc/inicio.inc';
         </ol>
         </section>
           <?php
-            if(isset($_GET['id']))
+            if(isset($_GET['id']))                
             {
             require 'php/conexion.php';
             $buscar = $_GET['id'];
@@ -30,9 +30,9 @@ include 'inc/inicio.inc';
           <div class="col-lg-12">
         <section class="content"><!--AQUI COMIENZA EL CONTENIDO -->
         <div class="row">
-
+ 
             <div class="box box-warning widget-user-2">
-
+           
             <div class="widget-user-header bg-black" style="background: url('../dist/img/photo1.png') center center;">
               <div class="widget-user-image">
               <br>
@@ -46,7 +46,7 @@ include 'inc/inicio.inc';
               <br>
             </div>
           </div>
-
+            
 <!--FIN del la ficha de consulta-->
   <form method="post" action="php/guardarAnamnesis.php" id="miform">
     <div class="box  box-warning">
@@ -85,7 +85,7 @@ include 'inc/inicio.inc';
           <input type="number" name="edad" readonly="readonly" class="form-control" value="<?php echo $Ficha['edad']; ?>">
         </div>
       </div>
-
+    
 
     </div>
 
@@ -110,7 +110,7 @@ include 'inc/inicio.inc';
         <div class="col-lg-6">
         <label>Sueño</label>
           <input class="form-control" type="text" name="sueno" maxlength="20" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>        
       </div>
     </div>
     <!--/////////////////////////////////////////////////////////////////-->
@@ -130,7 +130,7 @@ include 'inc/inicio.inc';
         <div>
           <label>Antecedentes Alérgicos</label>
           <input class="form-control" type="text" name="ante_alergicos" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>       
       </div>
     </div>
     <!--/////////////////////////////////////////////////////////////////-->
@@ -142,7 +142,7 @@ include 'inc/inicio.inc';
         <div>
           <label>Hábitos Tóxicos</label>
           <input class="form-control" type="text" name="habitos_toxicos" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>      
       </div>
     </div>
     <!--/////////////////////////////////////////////////////////////////-->
@@ -154,7 +154,7 @@ include 'inc/inicio.inc';
         <div>
           <label>Antecedentes quirúrgicos / hospitalarios</label>
           <input class="form-control" type="text" name="ant_hospitalarios" maxlength="100" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>      
       </div>
     </div>
     <!--//////////////////////////////////////////////////////////////////-->
@@ -168,7 +168,7 @@ include 'inc/inicio.inc';
         <div>
           <label>Historia de enfermedad actual</label>
           <input class="form-control" type="text" name="historial_enfermedades" maxlength="100" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>      
       </div>
     </div>
     <!--//////////////////////////////////////////////////////////////////-->
@@ -180,12 +180,12 @@ include 'inc/inicio.inc';
         <div>
           <label>Antecedentes patológicos familiares</label>
           <input class="form-control" type="text" name="antecedentes_familiares" maxlength="100" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>      
       </div>
-    </div>
+    </div> 
 
     <input type="submit" class="btn btn-warning btn-flat pull-right" value="Guardar Ficha"/>
-    <a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a>
+    <a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a>   
   </form>
 <!--INICIO-->
 <?php
@@ -199,7 +199,7 @@ include 'inc/inicio.inc';
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-
+     
 <?php
 include 'inc/scripts.inc';
 ?>

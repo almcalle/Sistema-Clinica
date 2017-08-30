@@ -1,7 +1,7 @@
 <?php
 require 'php/requerirUsuario.php';
 include 'inc/inicio.inc';
-?>
+?>    
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -9,13 +9,13 @@ include 'inc/inicio.inc';
       <div class="content-wrapper">
         <section class="content-header">
         <h1>
-        Consulta de Diagnostico
+        Mantenimiento Pacientes
         <small></small>
         </h1>
         <ol class="breadcrumb">
         <li><a href="menu.php"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li>Ficha de Diagnostico</li>
-        <li class="active">Consulta de Diagnostico</li>
+        <li>Fichas</li>
+        <li class="active">Mantenimiento Pacientes</li>
         </ol>
         </section>
         <section class="content"><!--AQUI COMIENZA EL CONTENIDO -->
@@ -24,7 +24,7 @@ include 'inc/inicio.inc';
           <section id="tabla_resultado">
         <!-- AQUI SE DESPLEGARA NUESTRA TABLA DE CONSULTA -->
         <?php
-        require 'php/conexion.php';
+        require '/php/conexion.php';
         $id = $_POST['id'];
 
 
@@ -47,7 +47,7 @@ include 'inc/inicio.inc';
         echo'<tr>
                   <td>'.$registro2['identidad'].'</td>
                   <td>'.$nombre['nombre'].'</td>
-                        <td><a href="javascript:detalleDiagnostico('.$registro2['id'].');" class="glyphicon glyphicon-search" data-toggle="tooltip" title="Ver Detalle"></a>&nbsp;&nbsp;&nbsp;<a href="javascript:borrarFicha('.$registro2['identidad'].');" class="fa fa-trash" data-toggle="tooltip" title="borrar Evaluación"></a>
+                        <td><a href="detalleFicha.php?id='.$registro2['identidad'].'" class="glyphicon glyphicon-search" data-toggle="tooltip" title="Ver Detalle"></a>&nbsp;&nbsp;&nbsp;<a href="javascript:borrarFicha('.$registro2['identidad'].');" class="fa fa-trash" data-toggle="tooltip" title="borrar Ficha"></a>
                         &nbsp;&nbsp;&nbsp;<a href="Examen.php?id='.$registro2['identidad'].'" class="fa fa-external-link" data-toggle="tooltip" title="Nuevo Examen Fisíco"></a>
 				        &nbsp;&nbsp;&nbsp;<a href="Evaluacion.php?id='.$registro2['identidad'].'" class="fa fa-pencil-square" data-toggle="tooltip" title="Nueva Evaluación"></a>
                         &nbsp;&nbsp;&nbsp;<a href="Anamnesis.php?id='.$registro2['identidad'].'" class="fa fa-pencil" data-toggle="tooltip" title="Nuevo Anamnesis"></a>
@@ -55,27 +55,27 @@ include 'inc/inicio.inc';
 				</td>
 				</tr>';
       }
-        echo '</tbody></table>';
-
+        echo '</tbody></table>'; 
+       
         ?>
         </section>
             </div>
            </div>
          </section><!-- right col -->
-
+          
     </div><!-- ./wrapper -->
        <?php
       include 'inc/footer.inc';
       ?>
-     </div>
-
+     </div>    
+  
 <?php
 include 'inc/scripts.inc';
 ?>
-<script src = "js/jquery.dataTables.js" type="text/javascript"></script>
+<script src = "/js/jquery.dataTables.js" type="text/javascript"></script>
 <script type="text/javascript">
     function borrarFicha(id){
-		var url = 'php/borrarFicha.php';
+		var url = '/php/borrarFicha.php';
 		var pregunta = confirm('¿Esta seguro de eliminar esta Ficha?');
 		if(pregunta==true){
 			$.ajax({
@@ -90,8 +90,8 @@ include 'inc/scripts.inc';
 			return false;
 		}
 	}
-
-
+    
+    
 </script>
 <script type="text/javascript">
 $(document).ready(function() {

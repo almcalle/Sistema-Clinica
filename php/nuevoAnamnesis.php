@@ -6,7 +6,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
 $reg = mysql_num_rows($registro);
 if ($reg==0) {
 	echo"<div class=\"alert alert-block alert-info\">
-	<h4>Lo sentimos!</h4>El Registro no fue encontrado.<a href='nuevaFicha.php'> Registrar una nueva ficha?</a>
+	<h4>Lo sentimos!</h4>El Registro no fue encontrado.<a href='../nuevaFicha.php'> Registrar una nueva ficha?</a>
 	</div>";
 }
 else{
@@ -46,7 +46,7 @@ mysql_close($conexion);
 
           <!-- /.widget-user -->
 </div>
-</div>
+</div> 
 </div>
 <!--FIN del la ficha de consulta-->
 
@@ -88,7 +88,7 @@ mysql_close($conexion);
           <input type="number" name="edad" readonly="readonly" class="form-control" value="<?php echo $Ficha['edad']; ?>">
         </div>
       </div>
-
+    
 
     </div>
 
@@ -113,7 +113,7 @@ mysql_close($conexion);
         <div class="col-lg-6">
         <label>Sueño</label>
           <input class="form-control" type="text" name="sueno" maxlength="20" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>        
       </div>
     </div>
     <!--/////////////////////////////////////////////////////////////////-->
@@ -133,7 +133,7 @@ mysql_close($conexion);
         <div>
           <label>Antecedentes Alérgicos</label>
           <input class="form-control" type="text" name="ante_alergicos" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>       
       </div>
     </div>
     <!--/////////////////////////////////////////////////////////////////-->
@@ -145,7 +145,7 @@ mysql_close($conexion);
         <div>
           <label>Hábitos Tóxicos</label>
           <input class="form-control" type="text" name="habitos_toxicos" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>      
       </div>
     </div>
     <!--/////////////////////////////////////////////////////////////////-->
@@ -157,7 +157,7 @@ mysql_close($conexion);
         <div>
           <label>Antecedentes quirúrgicos / hospitalarios</label>
           <input class="form-control" type="text" name="ant_hospitalarios" maxlength="100" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>      
       </div>
     </div>
     <!--//////////////////////////////////////////////////////////////////-->
@@ -171,7 +171,7 @@ mysql_close($conexion);
         <div>
           <label>Historia de enfermedad actual</label>
           <input class="form-control" type="text" name="historial_enfermedades" maxlength="100" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>      
       </div>
     </div>
     <!--//////////////////////////////////////////////////////////////////-->
@@ -183,12 +183,12 @@ mysql_close($conexion);
         <div>
           <label>Antecedentes patológicos familiares</label>
           <input class="form-control" type="text" name="antecedentes_familiares" maxlength="100" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div>      
       </div>
-    </div>
+    </div> 
 
     <input type="submit" class="btn btn-primary btn-flat pull-right" value="Guardar Ficha"/>
-    <a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a>
+    <a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a>   
   </form>
 </div>
 

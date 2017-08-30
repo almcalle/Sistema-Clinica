@@ -1,7 +1,7 @@
 <?php
-require 'php/requerirUsuario.php';
-include 'inc/inicio.inc';
-?>
+require '/php/requerirUsuario.php';
+include '/inc/inicio.inc';
+?>    
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -21,20 +21,20 @@ include 'inc/inicio.inc';
         <section class="content"><!--AQUI COMIENZA EL CONTENIDO -->
         <div class="row">
          <div class="col-lg-12">
-         	<div class="panel panel-primary">
+         	<div class="panel panel-warning">
          <div class="panel-heading">
          	<h4></h4>
          </div>
          <div class="panel-body">
          		 <form role="form" method="POST" action="php/guardarFicha.php" enctype="multipart/form-data" id="miForm">
           	<!--MENU DE OPCIONES-->
-          	<div class="col-md-12">
+          	<div class="col-lg-12">
           <div class="box box-solid">
             <div class="box-header with-border">
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-					<input type="submit" class="btn btn-primary btn-flat pull-right" value="Guardar Ficha"/>
+					<input type="submit" class="btn btn-warning btn-flat pull-right" value="Guardar Ficha"/>
 					<a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a>
             </div>
             <!-- /.box-body -->
@@ -43,7 +43,7 @@ include 'inc/inicio.inc';
         </div>
           	<!--FIN DEL MENU OPCIONES-->
           	  <div class="col-lg-6"><!--informacion personal-->
-          		<div class="box box-primary">
+          		<div class="box box-warning">
           			<div class="box-header with-border">
 	    			<i class="fa fa-pencil"></i>
 	    			<h3 class="box-title">INFORMACIÓN PERSONAL</h3>
@@ -68,7 +68,7 @@ include 'inc/inicio.inc';
 	    				<div class="col-xs-6">
 	    					<label for="edad">* Edad</label>
 	    					<input  type="number" min="1" max="99" required="required" name="edad" class="form-control"/>
-	    				</div>
+	    				</div>	    					
 	    				</div>
 	    				<div class="form-group"><!--Responsable-->
 	    					<label for="responsable">Nombre del responsable</label>
@@ -95,14 +95,14 @@ include 'inc/inicio.inc';
 	    					</div>
 	    					<div class="col-xs-6">
 	    						<label for="seccion">Sección</label>
-	    						<input  type="number" min="1" max="9" required="required" name="seccion" class="form-control"/>
+	    						<input  type="number" min="1" max="99" required="required" name="seccion" class="form-control"/>
 	    					</div>
 	    				</div>
 	    			</div>
 	    		</div>
           	</div>
           	<div class="col-lg-6"><!--informacion general-->
-          		<div class="box box-primary">
+          		<div class="box box-warning">
           			<div class="box-header with-border">
 	    				<i class="fa fa-pencil"></i>
 	    				<h3 class="box-title">INFORMACIÓN GENERAL</h3>
@@ -133,18 +133,19 @@ include 'inc/inicio.inc';
           	</div>
 			<!--Fotografia-->
 			<div class="col-lg-6">
-				<div class="box box-primary">
+				<div class="box box-warning">
 					<div class="box-header with-border">
 	    			<i class="fa fa-pencil"></i>
 	    			<h3 class="box-title">FOTOGRAFÍA</h3>
 	    		</div>
 	    		<div class="box-body">
 	    		<div class="form-group">
-                    	 <input class="btn btn-primary" type="file" name="imagen"/>
+                    	 <input class="btn btn-warning" type="file" name="imagen"/>
            			</div>
 				</div>
 				</div>
 			</div>
+                     
           </form>
          	</div>
          </div>
@@ -156,7 +157,7 @@ include 'inc/inicio.inc';
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-
+     
 <?php
 include 'inc/scripts.inc';
 ?>
@@ -174,7 +175,7 @@ function soloNumero(e){
     //Tecla de retroceso para borrar, siempre la permite
     if (tecla==8){
         return true;
-    }
+    }   
     // Patron de entrada, en este caso solo acepta numeros
     patron =/[0-9]/;
     tecla_final = String.fromCharCode(tecla);

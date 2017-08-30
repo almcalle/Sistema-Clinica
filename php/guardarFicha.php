@@ -39,15 +39,15 @@ if (empty($imagen_portada)) {
 
 			else{
 
-				echo '<script type="text/javascript">alert("El tamaï¿½o de la portada es superior al permitido");</script>';
+				echo '<script type="text/javascript">alert("El tamaño de la portada es superior al permitido");</script>';
 
 				$imagen_portada = "avatar.png";
 
 			}
 
+			
 
-
-		}
+		}	
 
 		require "conexion.php";
 		$consulta = mysql_query("select identidad from ficha where identidad='".$identidad."'")or die(mysql_error());
@@ -61,12 +61,12 @@ if (empty($imagen_portada)) {
 			}
 			mysql_query("insert into ficha(identidad,nombre,fecha_nacimiento,edad,responsable,grado,seccion,escuela,direccion,municipio,departamento,foto) values('".$identidad."','".$nombre."','".$fecha."','".$edad."','".$responsable."','".$grado."','".$seccion."','".$escuela."','".$direccion."','".$municipio."','".$departamento."','".$foto."')") or die(mysql_error());
 			echo '<script type="text/javascript">alert("Ficha Guardada");</script>';
-			echo "<script>window.location = 'nuevaFicha.php'</script>";
+			echo "<script>window.location = '../nuevaFicha.php'</script>";
 		}
 		else {
 			echo '<script type="text/javascript">alert("El No. de identidad ya se encuentra registrado");</script>';
-			echo "<script>window.location = '.nuevaFicha.php'</script>";
+			echo "<script>window.location = '../nuevaFicha.php'</script>";
 		}
-		mysql_close();
+		mysql_close();	
 }
 ?>

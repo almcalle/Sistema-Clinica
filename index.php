@@ -4,7 +4,7 @@
 	<div class="login-box">
       <div class="login-logo">
       <p>Clinica</p>
-      <p>Santa Teresa de Jesús</p>
+      <p>Virgen de Suyapa</p>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Clinica medica iniciar sesión</p>

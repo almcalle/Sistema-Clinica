@@ -6,7 +6,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
 $reg = mysql_num_rows($registro);
 if ($reg==0) {
 	echo"<div class=\"alert alert-block alert-info\">
-	<h4>Lo sentimos!</h4>El Registro no fue encontrado.<a href='nuevaFicha.php'> Registrar una nueva ficha?</a>
+	<h4>Lo sentimos!</h4>El Registro no fue encontrado.<a href='../nuevaFicha.php'> Registrar una nueva ficha?</a>
 	</div>";
 }
 else{
@@ -47,7 +47,7 @@ mysql_close($conexion);
           <!-- /.widget-user -->
 </div>
     </div>
-</div>
+</div>  
 <!--FIN del la ficha de consulta-->
 <div class="col-lg-12">
      <form role="form" method="POST" action="php/guardarExamen.php" enctype="multipart/form-data" id="miForm">
@@ -63,7 +63,7 @@ mysql_close($conexion);
                 <input class="form-control" maxlength="13" readonly="readonly" required="required" type="text" name="identidad" placeholder="" value="<?php echo $Ficha['identidad']; ?>" />
             </div>
         <div class="col-lg-2">
-
+            
           <label>PA:</label>
           <input class="form-control" type="text" name="pa" maxlength="10" required="required" placeholder="70/100" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
@@ -78,7 +78,7 @@ mysql_close($conexion);
         <div class="col-lg-2">
         <label>Peso (Kilos)</label>
           <input class="form-control" type="text" name="peso" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
+        </div> 
         <div class="col-lg-2">
           <label>Talla:</label>
           <input class="form-control" type="text" name="talla" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
@@ -86,8 +86,8 @@ mysql_close($conexion);
         <div class="col-lg-2">
         <label>IMC:</label>
           <input class="form-control" type="text" name="imc" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>
-      </div>
+        </div>         
+      </div> 
     </div>
          <!--////////////////////////////////////-->
   <div class="box box-primary">
@@ -109,7 +109,7 @@ mysql_close($conexion);
                 <input type="text" name="nariz" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
-                <label>* Cuello</label>
+                <label>* Coello</label>
                 <input type="text" name="coello" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             <div>
                 <label>* Tórax</label>
@@ -144,7 +144,7 @@ mysql_close($conexion);
               <input type="submit" class="btn btn-primary btn-flat pull-right" value="Guardar Ficha"/>
               <a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a>
             </div>
-
+         
             </div>
 </div>
          </div>
