@@ -1,5 +1,5 @@
 <header class="main-header">
-  <a href="/menu.php" class="logo">
+  <a href="menu.php" class="logo">
     <!-- LOGO -->
     <i class="fa fa-cogs"></i>
   </a>
@@ -22,8 +22,8 @@
 <a href="php/cerrar-sesion.php">Salir</a>
           <ul class="dropdown-menu">
             <!-- User image -->
-            <li  
-    
+            <li
+
             </li>
             <!-- Menu Footer-->
             <li class="user-footer">
@@ -56,7 +56,7 @@
                     <i class="fa fa-angle-left pull-right"></i>
                   </a>
                   <ul class="treeview-menu">
-                    <li><a href="/nuevaFicha.php"><i class="fa fa-circle-o text-orange"></i> Registrar niño(a)</a></li>
+                    <li><a href="nuevaFicha.php"><i class="fa fa-circle-o text-orange"></i> Registrar niño(a)</a></li>
                     <li><a href="consultaFicha.php"><i class="fa fa-circle-o text-orange"></i> Control Ficha</a></li>
                   </ul>
                 </li>
@@ -68,7 +68,7 @@
                     <i class="fa fa-angle-left pull-right"></i>
                   </a>
                   <ul class="treeview-menu">
-                    <li><a href="/consultaExamen.php"><i class="fa fa-circle-o text-orange"></i> Consultar Examen Físico</a></li>
+                    <li><a href="consultaExamen.php"><i class="fa fa-circle-o text-orange"></i> Consultar Examen Físico</a></li>
                   </ul>
                 </li>
                 <!--Evaluacion medica-->
@@ -79,7 +79,7 @@
                     <i class="fa fa-angle-left pull-right"></i>
                   </a>
                   <ul class="treeview-menu">
-                    <li><a href="/consultaEvaluacion.php"><i class="fa fa-circle-o text-orange"></i> Consultar Evaluación medica</a></li>
+                    <li><a href="consultaEvaluacion.php"><i class="fa fa-circle-o text-orange"></i> Consultar Evaluación medica</a></li>
                   </ul>
                 </li>
                 <!--Examen Físico -->
