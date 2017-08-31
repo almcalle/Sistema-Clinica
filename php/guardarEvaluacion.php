@@ -16,7 +16,7 @@ if(isset ($_POST['identidad'])){
     require 'conexion.php';
     mysql_query("insert into evaluaciones(identidad,ojo_izquierdo,ojo_derecho,estrabismo,perdida_auditiva,transtorno_fonacion,pediculosis,sarna,anemia,violencia,problemas_personalidad,problemas_aprendizaje,uso_drogas,fecha) values('".$identidad."','".$oi."','".$od."','".$estrabismo."','".$perdida_auditiva."','".$transtorno_fonacion."','".$pediculosis."','".$sarna."','".$anemia."','".$violencia."','".$problemas_personalidad."','".$problemas_aprendizaje."','".$uso_drogas."', CURDATE())") or die(mysql_error());
         echo '<script type="text/javascript">alert("Diagnostico Guardado");</script>';
-        echo "<script>window.location = '../Evaluacion.php'</script>";
+        echo "<script>window.location = '../detalleFicha.php?id=".$identidad."'</script>";
    
     mysql_close($conexion);
 }

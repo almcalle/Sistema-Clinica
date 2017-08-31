@@ -9,7 +9,7 @@ if(isset ($_POST['identidad'])){
     require 'conexion.php';
     mysql_query("insert into diagnosticos(identidad,patologico,nutricional,socieconomico,inmunologico,etario,fecha) values('".$identidad."','".$patologico."','".$nutricional."','".$socieconomico."','".$inmunologico."','".$etario."', CURDATE())") or die(mysql_error());
         echo '<script type="text/javascript">alert("Diagnostico Guardado");</script>';
-        echo "<script>window.location = '../Diagnostico.php'</script>";
+        echo "<script>window.location = '../detalleFicha.php?id=".$identidad."'</script>";
    
     mysql_close($conexion);
 }

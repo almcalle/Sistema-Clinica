@@ -1,7 +1,7 @@
 <?php
 require 'php/requerirUsuario.php';
 include 'inc/inicio.inc';
-?>    
+?>
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -24,7 +24,7 @@ include 'inc/inicio.inc';
         <section id="tabla_resultado">
         <!-- AQUI SE DESPLEGARA NUESTRA TABLA DE CONSULTA -->
         <?php
-        require '/php/conexion.php';
+        require 'php/conexion.php';
         $id = $_POST['id'];
 
 
@@ -54,8 +54,8 @@ include 'inc/inicio.inc';
                         <td><a href="javascript:detalleExamen('.$registro2['id'].');" class="glyphicon glyphicon-search" data-toggle="tooltip" title="Ver Detalle"></a>&nbsp;&nbsp;&nbsp;<a href="javascript:borrarExamen('.$registro2['id'].');" class="fa fa-trash" data-toggle="tooltip" title="borrar Examen"></a></td>
                    </tr>';
       }
-        echo '</tbody></table>'; 
-       
+        echo '</tbody></table>';
+
         ?>
         </section>
            <!--//////////////////////////////////AQUI SE MUESTRA LA INFORMACION/////////////////////////-->
@@ -63,7 +63,7 @@ include 'inc/inicio.inc';
           </div>
           <div class="col-lg-5"><!--AQUI SE MUESTRA LA INFORMACION-->
             <div class="registros" id="agrega-registros"></div>
-            <center><ul class="pagination" id="pagination"></ul></center> 
+            <center><ul class="pagination" id="pagination"></ul></center>
           <div class="registros" id="agrega-registros"></div>
           <center><ul class="pagination" id="pagination"></ul></center>
            </div>
@@ -75,15 +75,15 @@ include 'inc/inicio.inc';
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-     
+
 <?php
 include 'inc/scripts.inc';
 ?>
-     
-<script src = "/js/jquery.dataTables.js" type="text/javascript"></script>
+
+<script src = "js/jquery.dataTables.js" type="text/javascript"></script>
 <script type="text/javascript">
 function detalleExamen(id){
-    var url = '/php/detalleExamen.php';
+    var url = 'php/detalleExamen.php';
     if(!id){
         }
         else{
@@ -102,7 +102,7 @@ function detalleExamen(id){
 </script>
 <script type="text/javascript">
     function borrarExamen(id){
-		var url = '/php/borrarExamen.php';
+		var url = 'php/borrarExamen.php';
 		var pregunta = confirm('¿Esta seguro de eliminar el Examen?');
 		if(pregunta==true){
 			$.ajax({

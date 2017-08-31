@@ -21,7 +21,7 @@ if(isset ($_POST['identidad'])){
     require 'conexion.php';
     mysql_query("insert into examen(identidad,pa,fr,temperatura,peso,talla,imc,cabeza,oidos,nariz,coello,torax,corazon,abdomen,genitales,extremidades,piel,observaciones,fecha) values('".$identidad."','".$pa."','".$fr."','".$temperatura."','".$peso."','".$talla."','".$imc."','".$cabeza."','".$oidos."','".$nariz."','".$coello."','".$torax."','".$corazon."','".$abdomen."','".$genitales."','".$extremidades."','".$piel."','".$observaciones."',CURDATE())") or die(mysql_error());
         echo '<script type="text/javascript">alert("Examen Guardado");</script>';
-        echo "<script>window.location = '../Examen.php'</script>";
+        echo "<script>window.location = '../detalleFicha.php?id=".$identidad."'</script>";
    
     mysql_close($conexion);
 }

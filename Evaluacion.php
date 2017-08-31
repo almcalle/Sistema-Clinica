@@ -1,7 +1,7 @@
 <?php
-require '/php/requerirUsuario.php';
-include '/inc/inicio.inc';
-?>    
+require 'php/requerirUsuario.php';
+include 'inc/inicio.inc';
+?>
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -27,7 +27,7 @@ include '/inc/inicio.inc';
             </div>
             <div class="box-body">
 <?php
-if(isset($_GET['id']))                
+if(isset($_GET['id']))
 {
 require 'php/conexion.php';
 $buscar = $_GET['id'];
@@ -36,7 +36,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
     $Ficha = mysql_fetch_array($registro);
     ?>
           <div class="box box-widget widget-user-2">
-           
+
             <div class="widget-user-header bg-black" style="background: url('../dist/img/photo1.png') center center;">
               <div class="widget-user-image">
               <br>
@@ -52,7 +52,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
           </div>
             </div>
                 </div>
-            </div>  
+            </div>
 <!--FIN del la ficha de consulta-->
 <form method="post" action="/php/guardarEvaluacion.php" id="miForm">
 <div class="col-lg-12">
@@ -87,70 +87,70 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
                 <label>Estrabismo</label>
                     <select name="estrabismo" class="form-control">
                     <option value="No">No</option>
-                    <option value="Si">Si</option>    
+                    <option value="Si">Si</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
                 <label>Pérdida Auditiva</label>
                     <select name="pa" class="form-control">
                     <option value="No">No</option>
-                    <option value="Si">Si</option>  
+                    <option value="Si">Si</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
                 <label>Trastornos de Formación</label>
                     <select name="tf" class="form-control">
                     <option value="No">No</option>
-                    <option value="Si">Si</option>  
+                    <option value="Si">Si</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
                 <label>Pediculosis</label>
                     <select name="pediculosis" class="form-control">
                     <option value="No">No</option>
-                    <option value="Si">Si</option>  
+                    <option value="Si">Si</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
                 <label>Escabiosis o Sarna</label>
                     <select name="sarna" class="form-control">
                     <option value="No">No</option>
-                    <option value="Si">Si</option>  
+                    <option value="Si">Si</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
                 <label>Sospecha de Anemia</label>
                     <select name="sa" class="form-control">
                     <option value="No">No</option>
-                    <option value="Si">Si</option>  
+                    <option value="Si">Si</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
                 <label>Sospecha de Violencia</label>
                     <select name="sv" class="form-control">
                     <option value="No">No</option>
-                    <option value="Si">Si</option>  
+                    <option value="Si">Si</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
                 <label>Problemas de Personalidad</label>
                     <select name="pp" class="form-control">
                     <option value="No">No</option>
-                    <option value="Si">Si</option>   
+                    <option value="Si">Si</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
                 <label>Problemas de Aprendizaje</label>
                     <select name="aprendizaje" class="form-control">
                     <option value="No">No</option>
-                    <option value="Si">Si</option>  
+                    <option value="Si">Si</option>
                     </select>
                 </div>
                 <div class="col-lg-3">
                 <label>Uso de Drogas</label>
                     <select name="ud" class="form-control">
                     <option value="No">No</option>
-                    <option value="Si">Si</option>   
+                    <option value="Si">Si</option>
                     </select>
                 </div>
                 <div class="col-lg-12">
@@ -174,7 +174,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-     
+
 <?php
 include 'inc/scripts.inc';
 ?>

@@ -1,7 +1,7 @@
 <?php
-require '/php/requerirUsuario.php';
-include '/inc/inicio.inc';
-?>    
+require 'php/requerirUsuario.php';
+include 'inc/inicio.inc';
+?>
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -27,7 +27,7 @@ include '/inc/inicio.inc';
             </div>
             <div class="box-body">
 <?php
-if(isset($_GET['id']))                
+if(isset($_GET['id']))
 {
 require 'php/conexion.php';
 $buscar = $_GET['id'];
@@ -36,7 +36,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
     $Ficha = mysql_fetch_array($registro);
     ?>
           <div class="box box-widget widget-user-2">
-           
+
             <div class="widget-user-header bg-black" style="background: url('../dist/img/photo1.png') center center;">
               <div class="widget-user-image">
               <br>
@@ -54,7 +54,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
 
             </div>
                 </div>
-            </div>  
+            </div>
 <!--FIN del la ficha de consulta-->
 <div class="col-lg-12">
      <form role="form" method="POST" action="php/guardarExamen.php" enctype="multipart/form-data" id="miForm">
@@ -70,7 +70,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
                 <input class="form-control" maxlength="13" readonly="readonly" required="required" type="text" name="identidad" placeholder="" value="<?php echo $Ficha['identidad']; ?>" />
             </div>
         <div class="col-lg-2">
-            
+
           <label>PA:</label>
           <input class="form-control" type="text" name="pa" maxlength="10" required="required" placeholder="70/100" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
@@ -85,7 +85,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
         <div class="col-lg-2">
         <label>Peso (Kilos)</label>
           <input class="form-control" type="text" name="peso" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div> 
+        </div>
         <div class="col-lg-2">
           <label>Talla:</label>
           <input class="form-control" type="text" name="talla" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
@@ -93,8 +93,8 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
         <div class="col-lg-2">
         <label>IMC:</label>
           <input class="form-control" type="text" name="imc" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>         
-      </div> 
+        </div>
+      </div>
     </div>
          <!--////////////////////////////////////-->
   <div class="box box-warning">
@@ -151,12 +151,12 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
               <input type="submit" class="btn btn-warning btn-flat pull-right" value="Guardar Ficha"/>
               <a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a>
             </div>
-         
+
             </div>
 </div>
          </div>
           </form>
-</div> 
+</div>
 <?php
 }
 ?>
@@ -167,7 +167,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-     
+
 <?php
 include 'inc/scripts.inc';
 ?>

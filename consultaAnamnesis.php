@@ -1,7 +1,7 @@
 <?php
 require 'php/requerirUsuario.php';
 include 'inc/inicio.inc';
-?>    
+?>
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -24,7 +24,7 @@ include 'inc/inicio.inc';
         <section id="tabla_resultado">
         <!-- AQUI SE DESPLEGARA NUESTRA TABLA DE CONSULTA -->
         <?php
-        require '/php/conexion.php';
+        require 'php/conexion.php';
         $id = $_POST['id'];
 
 
@@ -54,8 +54,8 @@ include 'inc/inicio.inc';
                         <td><a href="javascript:detalleAnamnesis('.$registro2['id'].');" class="glyphicon glyphicon-search" data-toggle="tooltip" title="Ver Detalle"></a>&nbsp;&nbsp;&nbsp;<a href="javascript:borrarAnamnesis('.$registro2['id'].');" class="fa fa-trash" data-toggle="tooltip" title="borrar Evaluación"></a></td>
                    </tr>';
       }
-        echo '</tbody></table>'; 
-       
+        echo '</tbody></table>';
+
         ?>
         </section>
            <!--//////////////////////////////////AQUI SE MUESTRA LA INFORMACION/////////////////////////-->
@@ -63,7 +63,7 @@ include 'inc/inicio.inc';
           </div>
           <div class="col-lg-5"><!--AQUI SE MUESTRA LA INFORMACION-->
             <div class="registros" id="agrega-registros"></div>
-            <center><ul class="pagination" id="pagination"></ul></center> 
+            <center><ul class="pagination" id="pagination"></ul></center>
           <div class="registros" id="agrega-registros"></div>
           <center><ul class="pagination" id="pagination"></ul></center>
            </div>
@@ -75,14 +75,14 @@ include 'inc/inicio.inc';
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-     
+
 <?php
 include 'inc/scripts.inc';
 ?>
-<script src = "/js/jquery.dataTables.js" type="text/javascript"></script>
+<script src = "js/jquery.dataTables.js" type="text/javascript"></script>
 <script type="text/javascript">
 function detalleAnamnesis(id){
-    var url = '/php/detalleAnamnesis.php';
+    var url = 'php/detalleAnamnesis.php';
     if(!id){
         }
         else{
@@ -101,7 +101,7 @@ function detalleAnamnesis(id){
 </script>
 <script type="text/javascript">
     function borrarAnamnesis(id){
-		var url = '/php/borrarAnamnesis.php';
+		var url = 'php/borrarAnamnesis.php';
 		var pregunta = confirm('¿Esta seguro de eliminar el Anamnesis?');
 		if(pregunta==true){
 			$.ajax({

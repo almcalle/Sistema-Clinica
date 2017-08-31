@@ -1,7 +1,7 @@
 <?php
 require 'php/requerirUsuario.php';
 include 'inc/inicio.inc';
-?>    
+?>
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -24,7 +24,7 @@ include 'inc/inicio.inc';
           <section id="tabla_resultado">
         <!-- AQUI SE DESPLEGARA NUESTRA TABLA DE CONSULTA -->
         <?php
-        require '/php/conexion.php';
+        require 'php/conexion.php';
         $id = $_POST['id'];
 
 
@@ -55,27 +55,27 @@ include 'inc/inicio.inc';
 				</td>
 				</tr>';
       }
-        echo '</tbody></table>'; 
-       
+        echo '</tbody></table>';
+
         ?>
         </section>
             </div>
            </div>
          </section><!-- right col -->
-          
+
     </div><!-- ./wrapper -->
        <?php
       include 'inc/footer.inc';
       ?>
-     </div>    
-  
+     </div>
+
 <?php
 include 'inc/scripts.inc';
 ?>
-<script src = "/js/jquery.dataTables.js" type="text/javascript"></script>
+<script src = "js/jquery.dataTables.js" type="text/javascript"></script>
 <script type="text/javascript">
     function borrarFicha(id){
-		var url = '/php/borrarFicha.php';
+		var url = 'php/borrarFicha.php';
 		var pregunta = confirm('¿Esta seguro de eliminar esta Ficha?');
 		if(pregunta==true){
 			$.ajax({
@@ -90,8 +90,8 @@ include 'inc/scripts.inc';
 			return false;
 		}
 	}
-    
-    
+
+
 </script>
 <script type="text/javascript">
 $(document).ready(function() {

@@ -1,7 +1,7 @@
 <?php
-require '/php/requerirUsuario.php';
-include '/inc/inicio.inc';
-?>    
+require 'php/requerirUsuario.php';
+include 'inc/inicio.inc';
+?>
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -27,7 +27,7 @@ include '/inc/inicio.inc';
             </div>
             <div class="box-body">
 <?php
-if(isset($_GET['id']))                
+if(isset($_GET['id']))
 {
 require 'php/conexion.php';
 $buscar = $_GET['id'];
@@ -36,7 +36,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
     $Ficha = mysql_fetch_array($registro);
     ?>
           <div class="box box-widget widget-user-2">
-           
+
             <div class="widget-user-header bg-black" style="background: url('../dist/img/photo1.png') center center;">
               <div class="widget-user-image">
               <br>
@@ -52,7 +52,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
           </div>
             </div>
                 </div>
-            </div>  
+            </div>
 <!--FIN del la ficha de consulta-->
 <div class="col-lg-12">
   <div class="box box-warning">
@@ -105,7 +105,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-     
+
 <?php
 include 'inc/scripts.inc';
 ?>

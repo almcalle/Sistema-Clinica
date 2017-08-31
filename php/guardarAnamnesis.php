@@ -16,7 +16,7 @@ if(isset ($_POST['identidad'])){
     require 'conexion.php';
     mysql_query("insert into anamnesis(identidad,apetito,miccion,defecacion,sueno,enfe_cronicas,medicamentos,ante_alergicos,habitos_toxicos,ant_hospitalarios,historial_enfermedades,antecedentes_familiares,fecha) values('".$identidad."','".$apetito."','".$miccion."','".$defecacion."','".$sueno."','".$enfe_cronicas."','".$medicamentos."','".$ante_alergicos."','".$habitos_toxicos."','".$ant_hospitalarios."','".$historial_enfermedades."','".$antecedentes_familiares."',CURDATE())") or die(mysql_error());
         echo '<script type="text/javascript">alert("Anamnesis Guardado");</script>';
-        echo "<script>window.location = '../Anamnesis.php'</script>";
+        echo "<script>window.location = '../detalleFicha.php?id=".$identidad."'</script>";
    
     mysql_close($conexion);
 }

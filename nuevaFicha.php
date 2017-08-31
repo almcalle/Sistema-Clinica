@@ -1,7 +1,7 @@
 <?php
-require '/php/requerirUsuario.php';
-include '/inc/inicio.inc';
-?>    
+require 'php/requerirUsuario.php';
+include 'inc/inicio.inc';
+?>
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -68,7 +68,7 @@ include '/inc/inicio.inc';
 	    				<div class="col-xs-6">
 	    					<label for="edad">* Edad</label>
 	    					<input  type="number" min="1" max="99" required="required" name="edad" class="form-control"/>
-	    				</div>	    					
+	    				</div>
 	    				</div>
 	    				<div class="form-group"><!--Responsable-->
 	    					<label for="responsable">Nombre del responsable</label>
@@ -132,7 +132,7 @@ include '/inc/inicio.inc';
           		</div>
           	</div>
 			<!--Fotografia-->
-			<div class="col-lg-6">
+			<!-- <div class="col-lg-6">
 				<div class="box box-warning">
 					<div class="box-header with-border">
 	    			<i class="fa fa-pencil"></i>
@@ -144,8 +144,8 @@ include '/inc/inicio.inc';
            			</div>
 				</div>
 				</div>
-			</div>
-                     
+			</div> -->
+
           </form>
          	</div>
          </div>
@@ -157,7 +157,7 @@ include '/inc/inicio.inc';
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-     
+
 <?php
 include 'inc/scripts.inc';
 ?>
@@ -175,7 +175,7 @@ function soloNumero(e){
     //Tecla de retroceso para borrar, siempre la permite
     if (tecla==8){
         return true;
-    }   
+    }
     // Patron de entrada, en este caso solo acepta numeros
     patron =/[0-9]/;
     tecla_final = String.fromCharCode(tecla);
