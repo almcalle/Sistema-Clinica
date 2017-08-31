@@ -40,7 +40,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
             <div class="widget-user-header bg-black" style="background: url('../dist/img/photo1.png') center center;">
               <div class="widget-user-image">
               <br>
-              <center><img class="img-circle" src="<?php echo "img/".$Ficha['foto']; ?>" alt="<?php echo "img/".$Ficha['foto']; ?>" id="fotoGrande" /></center>
+              <!-- <center><img class="img-circle" src="<?php echo "img/".$Ficha['foto']; ?>" alt="<?php echo "img/".$Ficha['foto']; ?>" id="fotoGrande" /></center> -->
               </div>
               <!-- /.widget-user-image -->
               <center>
@@ -105,46 +105,46 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
 
             <div>
                 <label>* Cabeza</label>
-                <input type="text" name="cabeza" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="cabeza" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
                 <label>* Oídos</label>
-                <input type="text" name="oidos" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="oidos" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
                 <label>* Nariz</label>
-                <input type="text" name="nariz" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="nariz" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
                 <label>* Coello</label>
-                <input type="text" name="coello" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="coello" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             <div>
                 <label>* Tórax</label>
-                <input type="text" name="torax" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="torax" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* Corazón</label>
-              <input type="text" name="corazon" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="corazon" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* Abdomen</label>
-              <input type="text" name="abdomen" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="abdomen" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* Genitales</label>
-              <input type="text" name="genitales" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="genitales" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* Extremidades</label>
-              <input type="text" name="extremidades" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="extremidades" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* Piel y faneras</label>
-              <input type="text" name="piel" maxlength="40" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="piel" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* OBSERVACION</label>
-              <input type="text" name="observaciones" maxlength="40" class="form-control"  onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="observaciones" maxlength="200" class="form-control"  onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <br>

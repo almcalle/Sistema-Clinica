@@ -71,7 +71,7 @@ if ($reg==0) {
         <dd><?php echo $Ficha['municipio']; ?></dd>
         <dd>* Datos al momento del registro</dd>
     </dl><br/>
-    <a class="btn btn-app" href="javascript:borrarFicha(<?php echo $buscar; ?>);">
+    <a class="btn btn-app" href="javascript:borrarFicha(<?php echo $identidad; ?>);">
     	<i class="fa fa-bitbucket"></i> Borrar Ficha
     </a>
 
@@ -102,7 +102,7 @@ if ($reg==0) {
 <div class="panel-body">
 <dl>
 	<?php
-    $registro = mysql_query("select * from anamnesis where identidad='".$identidad."'");
+    $registro = mysql_query("select * from anamnesis where identidad='".$identidad."' ORDER BY `fecha` DESC");
     $anamnesis = mysql_fetch_array($registro); ?>
 <dl>
         <dt>Apetito:</dt>
@@ -137,7 +137,7 @@ if ($reg==0) {
 <!--Aqui finaliza el detalle del Anamnesis-->
     <!--Aqui comienza el detalle del diagnostico-->
     <?php
-    $sql = mysql_query("select * from diagnosticos where identidad='".$identidad."'");
+    $sql = mysql_query("select * from diagnosticos where identidad='".$identidad."' ORDER BY `fecha` DESC");
     $diagnostico = mysql_fetch_array($sql); ?>
 <div class="container">
 <div class="col-lg-6">
@@ -187,26 +187,28 @@ mysql_close($conexion);
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-<script type="text/javascript">
-    function borrarFicha(id){
-		var url = 'php/borrarFicha.php';
-		var pregunta = confirm('¿Esta seguro de eliminar esta Ficha?');
-		if(pregunta==true){
-			$.ajax({
-			type:'POST',
-			url:url,
-			data:'id='+id,
-			success: function(registro){
-				$('#agrega-registros').html(registro);
-			}
-		});
-		}else{
-			return false;
-		}
-	}
+      
+      <div id="agregar-html-borrado"></div>
 
-
-</script>
+      <script type="text/javascript">
+          function borrarFicha(id){
+            debugger;
+      		var url = 'php/borrarFicha.php';
+      		var pregunta = confirm('¿Esta seguro de eliminar el Examen?');
+      		if(pregunta==true){
+      			$.ajax({
+      			type:'POST',
+      			url:url,
+      			data:'id='+id,
+      			success: function(registro){
+      				$('#agregar-html-borrado').html(registro);
+      			}
+      		});
+      		}else{
+      			return false;
+      		}
+      	}
+      </script>
 <?php
 include 'inc/scripts.inc';
 ?>

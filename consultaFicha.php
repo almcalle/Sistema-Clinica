@@ -73,6 +73,9 @@ include 'inc/inicio.inc';
 include 'inc/scripts.inc';
 ?>
 <script src = "js/jquery.dataTables.js" type="text/javascript"></script>
+
+<div id="agregar-html-borrado"></div>
+
 <script type="text/javascript">
     function borrarFicha(id){
 		var url = 'php/borrarFicha.php';
@@ -83,7 +86,7 @@ include 'inc/scripts.inc';
 			url:url,
 			data:'id='+id,
 			success: function(registro){
-				$('#agrega-registros').html(registro);
+				$('#agregar-html-borrado').html(registro);
 			}
 		});
 		}else{
