@@ -4,6 +4,7 @@
 	$fecha = $_POST["fecha"];
 	$edad = $_POST["edad"];
 	$responsable = $_POST["responsable"];
+	$tel_responsable = $_POST["contacto_responsable"];
 	$grado = $_POST["grado"];
 	$seccion = $_POST["seccion"];
 	$escuela = $_POST["escuela"];
@@ -47,7 +48,7 @@ if (isset($_POST['identidad']) and isset($_POST['nombre'])) {
 
 
 
-		
+
 
 		require "conexion.php";
 		$consulta = mysql_query("select identidad from ficha where identidad='".$identidad."'")or die(mysql_error());
@@ -59,7 +60,7 @@ if (isset($_POST['identidad']) and isset($_POST['nombre'])) {
 			// else{
 			// 	$foto=$imagen_portada;
 			// }
-			mysql_query("insert into ficha(identidad,nombre,fecha_nacimiento,edad,responsable,grado,seccion,escuela,direccion,municipio,departamento) values('".$identidad."','".$nombre."','".$fecha."','".$edad."','".$responsable."','".$grado."','".$seccion."','".$escuela."','".$direccion."','".$municipio."','".$departamento."')") or die(mysql_error());
+			mysql_query("insert into ficha(identidad,nombre,fecha_nacimiento,edad,responsable,grado,seccion,escuela,direccion,municipio,departamento,contacto_responsable) values('".$identidad."','".$nombre."','".$fecha."','".$edad."','".$responsable."','".$grado."','".$seccion."','".$escuela."','".$direccion."','".$municipio."','".$departamento."','".$tel_responsable."')") or die(mysql_error());
 			echo '<script type="text/javascript">alert("Ficha Guardada");</script>';
 			echo "<script>window.location = '../detalleFicha.php?id=".$identidad."'</script>";
 		}

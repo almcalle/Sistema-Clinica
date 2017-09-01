@@ -67,7 +67,7 @@ mysql_close($conexion);
         </div>
         <div>
           <label>Dirección</label>
-          <input type="text" name="direccion" maxlength="50" required="required" readonly="readonly" class="form-control" value="<?php echo $Ficha['direccion']; ?>">
+          <input type="text" name="direccion" maxlength="200" required="required" readonly="readonly" class="form-control" value="<?php echo $Ficha['direccion']; ?>">
         </div>
         <div class="col-lg-3">
           <label>Sexo</label>
@@ -100,19 +100,19 @@ mysql_close($conexion);
       <div class="box-body">
         <div class="col-lg-6">
           <label>Apetito</label>
-          <input class="form-control" type="text" name="apetito" maxlength="20" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="apetito" maxlength="200" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-6">
           <label>Micción</label>
-          <input class="form-control" type="text" name="miccion" maxlength="20" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="miccion" maxlength="200" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-6">
           <label>Defecación</label>
-          <input class="form-control" type="text" name="defecacion" maxlength="20" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="defecacion" maxlength="200" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-6">
         <label>Sueño</label>
-          <input class="form-control" type="text" name="sueno" maxlength="20" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="sueno" maxlength="200" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>
@@ -124,15 +124,15 @@ mysql_close($conexion);
       <div class="box-body">
         <div>
           <label>Enfermedades Crónicas</label>
-          <input class="form-control" type="text" name="enfe_cronicas" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="enfe_cronicas" maxlength="200" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div>
           <label>Medicamentos que actualmente</label>
-          <input class="form-control" type="text" name="medicamentos" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="medicamentos" maxlength="200" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div>
           <label>Antecedentes Alérgicos</label>
-          <input class="form-control" type="text" name="ante_alergicos" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="ante_alergicos" maxlength="200" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>
@@ -144,7 +144,7 @@ mysql_close($conexion);
       <div class="box-body">
         <div>
           <label>Hábitos Tóxicos</label>
-          <input class="form-control" type="text" name="habitos_toxicos" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="habitos_toxicos" maxlength="200" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>

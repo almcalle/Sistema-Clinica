@@ -72,27 +72,27 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
         <div class="col-lg-2">
 
           <label>PA:</label>
-          <input class="form-control" type="text" name="pa" maxlength="10" required="required" placeholder="70/100" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="number" name="pa" maxlength="10" required="required" placeholder="70/100" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
-          <label>FR:  (PX)</label>
-          <input class="form-control" type="text" name="fr" maxlength="10" required="required"  onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <label>FR: (PX) (RPM)</label>
+          <input class="form-control" type="number" name="fr" maxlength="10" required="required"  onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
-          <label>T:</label>
-          <input class="form-control" type="text" name="t" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <label>Temperatura (º):</label>
+          <input class="form-control" type="number" name="t" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
-        <label>Peso (Kilos)</label>
-          <input class="form-control" type="text" name="peso" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+        <label>Peso (Kilos):</label>
+          <input class="form-control" type="number" name="peso" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
           <label>Talla:</label>
-          <input class="form-control" type="text" name="talla" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="number" name="talla" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
         <label>IMC:</label>
-          <input class="form-control" type="text" name="imc" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="number" name="imc" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>
@@ -116,7 +116,19 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
                 <input type="text" name="nariz" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
-                <label>* Coello</label>
+                <label>* Faringe</label>
+                <input type="text" name="faringe" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+            </div>
+            <div>
+                <label>* Escoliosis</label>
+                <input type="text" name="escoliosis" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+            </div>
+            <div>
+                <label>* dental</label>
+                <input type="text" name="dental" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+            </div>
+            <div>
+                <label>* Cuello</label>
                 <input type="text" name="coello" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             <div>
                 <label>* Tórax</label>

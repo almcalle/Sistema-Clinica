@@ -74,6 +74,10 @@ include 'inc/inicio.inc';
 	    					<label for="responsable">Nombre del responsable</label>
 	    					<input type="text" maxlength="40" onkeyup="javascript:this.value=this.value.toUpperCase();" style="text-transform: uppercase;" required="required" name="responsable" class="form-control" />
 	    				</div>
+              <div class="form-group"><!--Responsable-->
+	    					<label for="contacto_responsable">Contacto del responsable</label>
+	    					<input type="text" maxlength="40" onkeyup="javascript:this.value=this.value.toUpperCase();" style="text-transform: uppercase;" required="required" name="contacto_responsable" class="form-control" />
+	    				</div>
 	    				<div class="form-group">
 	    					<div class="col-xs-6">
 	    						<label for="grado">Grado</label>

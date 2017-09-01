@@ -57,6 +57,8 @@ if ($reg==0) {
         <dd><?php echo $Ficha['edad']." A&ntilde;os"; ?></dd>
         <dt>Responsable:</dt>
         <dd><?php echo $Ficha['responsable']; ?></dd>
+        <dt>Contacto Responsable:</dt>
+        <dd><?php echo $Ficha['contacto_responsable']; ?></dd>
         <dt>* Grado:</dt>
         <dd><?php echo $Ficha['grado']; ?></dd>
         <dt>* Secci&oacute;n:</dt>
@@ -91,6 +93,71 @@ if ($reg==0) {
 </div>
 </div>
 </div>
+
+
+<!--Aqui comienza el detalle del examen fisico-->
+
+<div class="container">
+<div class="col-lg-6">
+<div class="panel panel-warning">
+<div class="panel-heading">
+  <h3><i class="fa fa-folder-open"></i>Ficha de Examen Físico</h3>
+</div>
+<div class="panel-body">
+<dl>
+	<?php
+    $registro = mysql_query("select * from examen where identidad='".$identidad."' ORDER BY `fecha` DESC");
+    $examen = mysql_fetch_array($registro); ?>
+<dl>
+        <dt>PA:</dt>
+        <dd><?php echo $examen['pa']; ?></dd>
+        <dt>PA:</dt>
+        <dd><?php echo $examen['fr']; ?></dd>
+        <dt>Temperatura:</dt>
+        <dd><?php echo $examen['temperatura']; ?></dd>
+        <dt>Peso:</dt>
+        <dd><?php echo $examen['peso']; ?></dd>
+        <dt>Talla:</dt>
+        <dd><?php echo $examen['talla']; ?></dd>
+        <dt>IMC:</dt>
+        <dd><?php echo $examen['imc']; ?></dd>
+        <dt>Cabeza:</dt>
+        <dd><?php echo $examen['cabeza']; ?></dd>
+        <dt>Oidos:</dt>
+        <dd><?php echo $examen['oidos']; ?></dd>
+        <dt>Nariz:</dt>
+        <dd><?php echo $examen['nariz']; ?></dd>
+        <dt>Faringe:</dt>
+        <dd><?php echo $examen['faringe']; ?></dd>
+        <dt>Escoliosis:</dt>
+        <dd><?php echo $examen['escoliosis']; ?></dd>
+        <dt>Dental:</dt>
+        <dd><?php echo $examen['dental']; ?></dd>
+        <dt>Cuello:</dt>
+        <dd><?php echo $examen['coello']; ?></dd>
+        <dt>Torax:</dt>
+        <dd><?php echo $examen['torax']; ?></dd>
+        <dt>Corazon:</dt>
+        <dd><?php echo $examen['corazon']; ?></dd>
+        <dt>Abdomen:</dt>
+        <dd><?php echo $examen['abdomen']; ?></dd>
+        <dt>Genitales:</dt>
+        <dd><?php echo $examen['genitales']; ?></dd>
+        <dt>Extremidades:</dt>
+        <dd><?php echo $examen['extremidades']; ?></dd>
+        <dt>Piel:</dt>
+        <dd><?php echo $examen['piel']; ?></dd>
+        <dt>Observaciones:</dt>
+        <dd><?php echo $examen['observaciones']; ?></dd>
+        <dt>Fecha:</dt>
+        <dd><?php echo $examen['fecha']; ?></dd>
+    </dl><br/>
+</div>
+</div>
+</div>
+    </div>
+<!--Aqui finaliza el detalle del examen fisico-->
+
 <!--Aqui comienza el detalle del Anamnesis-->
 
 <div class="container">
@@ -171,9 +238,33 @@ if ($reg==0) {
 </div>
 </div>
     <!--Aqui finaliza el detalle del diagnostico-->
-    <!--Aqui comienza el detalle de las evaluaciones-->
+    <!--Aqui comienza el detalle de la evaluacion medica-->
+    <?php
+    $sql = mysql_query("select * from evaluaciones where identidad='".$identidad."' ORDER BY `fecha` DESC");
+    $evaluacion = mysql_fetch_array($sql); ?>
+  <div class="container">
+  <div class="col-lg-6">
+    <div class="panel panel-warning">
+  <div class="panel-heading"><h3><i class="fa fa-folder-open"></i>Ficha de Evaluación Medica</h3>
+  <!-- /.box-tools -->
+  </div>
 
-    <!--Aqui termina del detalle de las evaluaciones-->
+  <!-- /.box-header -->
+
+  <div class="panel-body">
+  <dl>
+        <dt>Nombre:</dt>
+        <dd><?php echo $evaluacion['nombre']; ?></dd>
+
+        <dt>Fecha:</dt>
+        <dd><?php echo $evaluacion['fecha']; ?></dd>
+    </dl>
+  </div>
+    <div class="box-footer"></div>
+  </div>
+  </div>
+  </div>
+    <!--Aqui finaliza el detalle del evaluacion medica-->
 <?php
 }
 mysql_close($conexion);
@@ -187,7 +278,7 @@ mysql_close($conexion);
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-      
+
       <div id="agregar-html-borrado"></div>
 
       <script type="text/javascript">

@@ -33,7 +33,7 @@ mysql_close($conexion);
             <div class="widget-user-header bg-black" style="background: url('../dist/img/photo1.jpg') center center;">
               <div class="widget-user-image">
               <br>
-              <center><img class="img-circle" src="<?php echo "img/".$Ficha['foto']; ?>" alt="<?php echo "img/".$registro['foto']; ?>" id="fotoGrande" /></center>
+              <!-- <center><img class="img-circle" src="<?php echo "img/".$Ficha['foto']; ?>" alt="<?php echo "img/".$registro['foto']; ?>" id="fotoGrande" /></center> -->
               </div>
               <!-- /.widget-user-image -->
               <center>
@@ -47,7 +47,7 @@ mysql_close($conexion);
           <!-- /.widget-user -->
 </div>
     </div>
-</div>  
+</div>
 <!--FIN del la ficha de consulta-->
 <div class="col-lg-12">
   <div class="box box-primary">
@@ -62,23 +62,23 @@ mysql_close($conexion);
             </div>
             <div>
                 <label>* Diagnostico Patológico</label>
-                <textarea name="patologico" maxlength="50" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
+                <textarea name="patologico" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
             </div>
             <div>
                 <label>* Diagnostico Nutricional</label>
-                <textarea name="nutricional" maxlength="50" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
+                <textarea name="nutricional" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
             </div>
             <div>
                 <label>* Diagnostico Socioeconómico</label>
-                <textarea name="socieconomico" maxlength="50" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
+                <textarea name="socieconomico" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
             </div>
             <div>
                 <label>* Diagnostico Inmunológico</label>
-                <textarea name="inmunologico" maxlength="50" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
+                <textarea name="inmunologico" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
             </div>
             <div>
                 <label>* Diagnostico Etario</label>
-                <textarea name="etario" maxlength="50" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
+                <textarea name="etario" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
             </div>
             <div>
             <br>
