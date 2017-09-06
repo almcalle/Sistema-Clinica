@@ -31,7 +31,7 @@ include 'inc/inicio.inc';
         $registro = mysql_query("SELECT * FROM anamnesis ") or die(mysql_error());
 
 
-      echo '<table id="example" class="display" cellspacing="0" width="100%">
+      echo '<table id="tablaAnamnesis" class="display" cellspacing="0" width="100%">
         <thead>
                       <tr>
                       <th width="100">ID</th>
@@ -119,7 +119,7 @@ function detalleAnamnesis(id){
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#example').DataTable();
+    $('#tablaAnamnesis').DataTable();
 } );
 </script>
 <?php

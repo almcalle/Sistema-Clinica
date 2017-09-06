@@ -1,7 +1,7 @@
 <?php
 require 'php/requerirUsuario.php';
 include 'inc/inicio.inc';
-?>    
+?>
       <div class="wrapper">
       <?php
       include 'inc/menu.inc';
@@ -19,7 +19,7 @@ include 'inc/inicio.inc';
         </ol>
         </section>
         <section class="content"><!--AQUI COMIENZA EL CONTENIDO -->
-        <?php 
+        <?php
         include'inc/buscar.inc';
         ?>
         </section><!-- right col -->
@@ -28,7 +28,7 @@ include 'inc/inicio.inc';
       include 'inc/footer.inc';
       ?>
       </div><!-- ./wrapper -->
-     
+
 <?php
 include 'inc/scripts.inc';
 ?>
@@ -37,7 +37,7 @@ include 'inc/scripts.inc';
 	var url = 'php/nuevaEvaluacion.php';
 	var buscar = document.getElementById('buscar').value;
 	if(!buscar){
-		
+
 		}
 		else{
 		$.ajax({

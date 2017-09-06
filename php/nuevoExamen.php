@@ -47,7 +47,7 @@ mysql_close($conexion);
           <!-- /.widget-user -->
 </div>
     </div>
-</div>  
+</div>
 <!--FIN del la ficha de consulta-->
 <div class="col-lg-12">
      <form role="form" method="POST" action="php/guardarExamen.php" enctype="multipart/form-data" id="miForm">
@@ -63,7 +63,7 @@ mysql_close($conexion);
                 <input class="form-control" maxlength="13" readonly="readonly" required="required" type="text" name="identidad" placeholder="" value="<?php echo $Ficha['identidad']; ?>" />
             </div>
         <div class="col-lg-2">
-            
+
           <label>PA:</label>
           <input class="form-control" type="text" name="pa" maxlength="10" required="required" placeholder="70/100" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
@@ -78,7 +78,7 @@ mysql_close($conexion);
         <div class="col-lg-2">
         <label>Peso (Kilos)</label>
           <input class="form-control" type="text" name="peso" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div> 
+        </div>
         <div class="col-lg-2">
           <label>Talla:</label>
           <input class="form-control" type="text" name="talla" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
@@ -86,9 +86,28 @@ mysql_close($conexion);
         <div class="col-lg-2">
         <label>IMC:</label>
           <input class="form-control" type="text" name="imc" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-        </div>         
-      </div> 
+        </div>
+      </div>
     </div>
+		<div class="col-lg-12">
+		  <div class="box box-danger">
+		  <div class="box-header with-border">
+		    <h3 class="box-title"><i class="fa fa-folder-open"></i>Agudeza Visual</h3>
+		  </div>
+		  <div class="box-body">
+		  <div class="col-lg-6">
+		  <label>* Ojo Izquierdo</label>
+		  <input type="text" maxlength="20" required="required" name="oi" class="form-control" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+		  </div>
+		    <div class="col-lg-6">
+		    <label>* Ojo Derecho</label>
+		    <input type="text" maxlength="20" required="required" name="od" class="form-control" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+		  </div>
+		</div>
+		</div>
+		</div>
+
+
          <!--////////////////////////////////////-->
   <div class="box box-primary">
   <div class="box-header with-border">
@@ -144,7 +163,7 @@ mysql_close($conexion);
               <input type="submit" class="btn btn-primary btn-flat pull-right" value="Guardar Ficha"/>
               <a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a>
             </div>
-         
+
             </div>
 </div>
          </div>

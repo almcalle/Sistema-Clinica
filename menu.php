@@ -2,7 +2,7 @@
 require 'php/requerirUsuario.php';
 include 'inc/inicio.inc';
 include 'inc/menu.inc';
-?>    
+?>
       <div class="wrapper">
       <div class="content-wrapper">
       	<section class="content-header">
@@ -20,7 +20,8 @@ include 'inc/menu.inc';
           <div class="row">
             <!-- Page Heading -->
 			<!-- ./col Fichas-->
-        		<div class="col-xs-6">
+      <div class="row">
+        		<div class="col-xs-12">
         		  <!-- small box -->
          		 	<div class="small-box bg-green">
             		<div class="inner">
@@ -38,11 +39,14 @@ include 'inc/menu.inc';
             		<div class="icon">
               			<i class="fa fa-users"></i>
             		</div>
-            		<a href="/nuevaFicha.php" class="small-box-footer">Nueva <i class="fa fa-arrow-circle-right"></i></a>
+            		<a href="nuevaFicha.php" class="small-box-footer">Nueva <i class="fa fa-arrow-circle-right"></i></a>
           			</div>
         		</div>
         <!-- ./col -->
         <!-- ./col Fichas-->
+      </div>
+
+        <div class="row">
         		<div class="col-xs-6">
         		  <!-- small box -->
          		 	<div class="small-box bg-red">
@@ -61,11 +65,12 @@ include 'inc/menu.inc';
             		<div class="icon">
               			<i class="fa  fa-gittip"></i>
             		</div>
-            		<a href="nuevoDiagnostico.php" class="small-box-footer">Nuevo <i class="fa fa-arrow-circle-right"></i></a>
+            		<!-- <a href="nuevoDiagnostico.php" class="small-box-footer">Nuevo <i class="fa fa-arrow-circle-right"></i></a> -->
           			</div>
         		</div>
           <!--/////////////////////////////////////-->
-          
+
+
                   <!-- ./col Fichas-->
         		<div class="col-xs-6">
         		  <!-- small box -->
@@ -85,11 +90,13 @@ include 'inc/menu.inc';
             		<div class="icon">
               			<i class="fa  fa-archive"></i>
             		</div>
-            		<a href="nuevoExamen.php" class="small-box-footer">Nuevo <i class="fa fa-arrow-circle-right"></i></a>
+            		<!-- <a href="nuevoExamen.php" class="small-box-footer">Nuevo <i class="fa fa-arrow-circle-right"></i></a> -->
           			</div>
         		</div>
         <!-- ./col -->
-                  <!-- ./col Fichas-->
+                  <!-- ./col Examen Fisico-->
+                </div>
+                <div class="row">
         		<div class="col-xs-6">
         		  <!-- small box -->
          		 	<div class="small-box bg-yellow">
@@ -108,13 +115,13 @@ include 'inc/menu.inc';
             		<div class="icon">
               			<i class="fa fa-file-text"></i>
             		</div>
-            		<a href="nuevoAnamnesis.php" class="small-box-footer">Nuevo <i class="fa fa-arrow-circle-right"></i></a>
+            		<!-- <a href="nuevoAnamnesis.php" class="small-box-footer">Nuevo <i class="fa fa-arrow-circle-right"></i></a> -->
           			</div>
         		</div>
 
-        <!-- ./col --> 
-                <!-- ./col -->
-                  <!-- ./col Fichas-->
+        <!-- ./col -->
+
+              
         		<div class="col-xs-6">
         		  <!-- small box -->
          		 	<div class="small-box bg-info">
@@ -133,11 +140,11 @@ include 'inc/menu.inc';
             		<div class="icon">
               			<i class="fa fa-heartbeat"></i>
             		</div>
-            		<a href="nuevaEvaluacion.php" class="small-box-footer">Nuevo <i class="fa fa-arrow-circle-right"></i></a>
+            		<!-- <a href="nuevaEvaluacion.php" class="small-box-footer">Nuevo <i class="fa fa-arrow-circle-right"></i></a> -->
           			</div>
         		</div>
 
-        <!-- ./col --> 
+        <!-- ./col -->
 </div>
         </section><!-- right col -->
       </div>

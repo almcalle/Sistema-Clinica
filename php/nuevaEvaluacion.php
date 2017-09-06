@@ -5,15 +5,13 @@ $buscar = $_POST['buscar'];
 $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
 $reg = mysql_num_rows($registro);
 if ($reg==0) {
-	echo"<div class=\"alert alert-block alert-info\">
+    echo"<div class=\"alert alert-block alert-info\">
 	<h4>Lo sentimos!</h4>El Registro no fue encontrado.<a href='../nuevaFicha.php'> Registrar una nueva ficha?</a>
 	</div>";
-}
-else{
-	 $Ficha = mysql_fetch_array($registro);
-	//CREAMOS NUESTRA VISTA Y LA DEVOLVEMOS AL AJAX
-mysql_close($conexion);
-?>
+} else {
+    $Ficha = mysql_fetch_array($registro);
+    //CREAMOS NUESTRA VISTA Y LA DEVOLVEMOS AL AJAX
+    mysql_close($conexion); ?>
             <style type="text/css">
                 textarea {
                     resize: none;
@@ -48,8 +46,8 @@ mysql_close($conexion);
           <!-- /.widget-user -->
 </div>
 <!--FIN del la ficha de consulta-->
-<form method="post" action="/php/guardarEvaluacion.php" id="miForm">
-<div class="col-lg-12">
+<form method="post" action="php/guardarEvaluacion.php" id="miForm">
+<!-- <div class="col-lg-12">
   <div class="box box-danger">
   <div class="box-header with-border">
     <h3 class="box-title"><i class="fa fa-folder-open"></i>Agudeza Visual</h3>
@@ -65,7 +63,7 @@ mysql_close($conexion);
   </div>
 </div>
 </div>
-    </div>
+    </div> -->
 <!--/////////////////////////////////////////////////////////////////////////////////////////////////-->
     <div class="col-lg-12">
         <div class="box box-primary">

@@ -13,6 +13,9 @@ if(isset ($_POST['identidad'])){
     $escoliosis = $_POST["escoliosis"];
     $dental = $_POST["dental"];
 
+    $oidoDerecho = $_POST["od"];
+    $oidoIzquierdo = $_POST["oi"];
+
     $nariz = $_POST["nariz"];
     $coello = $_POST["coello"];
     $torax = $_POST["torax"];
@@ -24,9 +27,9 @@ if(isset ($_POST['identidad'])){
     $observaciones = $_POST["observaciones"];
     require 'conexion.php';
     mysql_query("insert into examen(identidad,pa,fr,temperatura,peso,talla,imc,cabeza,oidos,nariz,faringe,escoliosis,dental,coello,
-    torax,corazon,abdomen,genitales,extremidades,piel,observaciones,fecha)
+    torax,corazon,abdomen,genitales,extremidades,piel,observaciones,ojo_derecho,ojo_izquierdo,fecha)
     values('".$identidad."','".$pa."','".$fr."','".$temperatura."','".$peso."','".$talla."','".$imc."',
-    '".$cabeza."','".$oidos."','".$nariz."','".$faringe."','".$escoliosis."','".$dental."','".$coello."','".$torax."','".$corazon."','".$abdomen."','".$genitales."','".$extremidades."','".$piel."','".$observaciones."',CURDATE())") or die(mysql_error());
+    '".$cabeza."','".$oidos."','".$nariz."','".$faringe."','".$escoliosis."','".$dental."','".$coello."','".$torax."','".$corazon."','".$abdomen."','".$genitales."','".$extremidades."','".$piel."','".$observaciones."','".$ojoDerecho."','".$ojoIzquierdo."',CURDATE())") or die(mysql_error());
         echo '<script type="text/javascript">alert("Examen Guardado");</script>';
         echo "<script>window.location = '../detalleFicha.php?id=".$identidad."'</script>";
 

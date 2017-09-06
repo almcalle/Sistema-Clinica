@@ -97,7 +97,7 @@ if ($reg==0) {
 
 <!--Aqui comienza el detalle del examen fisico-->
 
-<div class="container">
+<!-- <div class="container"> -->
 <div class="col-lg-6">
 <div class="panel panel-warning">
 <div class="panel-heading">
@@ -111,7 +111,7 @@ if ($reg==0) {
 <dl>
         <dt>PA:</dt>
         <dd><?php echo $examen['pa']; ?></dd>
-        <dt>PA:</dt>
+        <dt>FR:</dt>
         <dd><?php echo $examen['fr']; ?></dd>
         <dt>Temperatura:</dt>
         <dd><?php echo $examen['temperatura']; ?></dd>
@@ -121,6 +121,10 @@ if ($reg==0) {
         <dd><?php echo $examen['talla']; ?></dd>
         <dt>IMC:</dt>
         <dd><?php echo $examen['imc']; ?></dd>
+        <dt>Ojo Derecho:</dt>
+        <dd><?php echo $examen['ojo_derecho']; ?></dd>
+        <dt>Ojo Izquierdo:</dt>
+        <dd><?php echo $examen['ojo_izquierdo']; ?></dd>
         <dt>Cabeza:</dt>
         <dd><?php echo $examen['cabeza']; ?></dd>
         <dt>Oidos:</dt>
@@ -155,12 +159,12 @@ if ($reg==0) {
 </div>
 </div>
 </div>
-    </div>
+    <!-- </div> -->
 <!--Aqui finaliza el detalle del examen fisico-->
 
 <!--Aqui comienza el detalle del Anamnesis-->
 
-<div class="container">
+<!-- <div class="container"> -->
 <div class="col-lg-6">
 <div class="panel panel-warning">
 <div class="panel-heading">
@@ -200,13 +204,13 @@ if ($reg==0) {
 </div>
 </div>
 </div>
-    </div>
+    <!-- </div> -->
 <!--Aqui finaliza el detalle del Anamnesis-->
     <!--Aqui comienza el detalle del diagnostico-->
     <?php
     $sql = mysql_query("select * from diagnosticos where identidad='".$identidad."' ORDER BY `fecha` DESC");
     $diagnostico = mysql_fetch_array($sql); ?>
-<div class="container">
+<!-- <div class="container"> -->
 <div class="col-lg-6">
     <div class="panel panel-warning">
 <div class="panel-heading"><h3><i class="fa fa-folder-open"></i>Ficha de Diagnostico</h3>
@@ -236,13 +240,13 @@ if ($reg==0) {
     <div class="box-footer"></div>
 </div>
 </div>
-</div>
+<!-- </div> -->
     <!--Aqui finaliza el detalle del diagnostico-->
     <!--Aqui comienza el detalle de la evaluacion medica-->
     <?php
     $sql = mysql_query("select * from evaluaciones where identidad='".$identidad."' ORDER BY `fecha` DESC");
     $evaluacion = mysql_fetch_array($sql); ?>
-  <div class="container">
+  <!-- <div class="container"> -->
   <div class="col-lg-6">
     <div class="panel panel-warning">
   <div class="panel-heading"><h3><i class="fa fa-folder-open"></i>Ficha de Evaluación Medica</h3>
@@ -253,8 +257,26 @@ if ($reg==0) {
 
   <div class="panel-body">
   <dl>
-        <dt>Nombre:</dt>
-        <dd><?php echo $evaluacion['nombre']; ?></dd>
+        <dt>Estrabismo:</dt>
+        <dd><?php echo $evaluacion['estrabismo']; ?></dd>
+        <dt>Pérdida Auditiva:</dt>
+        <dd><?php echo $evaluacion['perdida_auditiva']; ?></dd>
+        <dt>Trastornos de Formación:</dt>
+        <dd><?php echo $evaluacion['transtorno_fonacion']; ?></dd>
+        <dt>Pediculosis:</dt>
+        <dd><?php echo $evaluacion['pediculosis']; ?></dd>
+        <dt>Escabiosis o Sarna:</dt>
+        <dd><?php echo $evaluacion['sarna']; ?></dd>
+        <dt>Sospecha de Anemia:</dt>
+        <dd><?php echo $evaluacion['anemia']; ?></dd>
+        <dt>Sospecha de Violencia:</dt>
+        <dd><?php echo $evaluacion['violencia']; ?></dd>
+        <dt>Problemas de Personalidad:</dt>
+        <dd><?php echo $evaluacion['problemas_personalidad']; ?></dd>
+        <dt>Problemas de Aprendizaje:</dt>
+        <dd><?php echo $evaluacion['problemas_aprendizaje']; ?></dd>
+        <dt>Uso de Drogas:</dt>
+        <dd><?php echo $evaluacion['uso_drogas']; ?></dd>
 
         <dt>Fecha:</dt>
         <dd><?php echo $evaluacion['fecha']; ?></dd>
@@ -263,7 +285,7 @@ if ($reg==0) {
     <div class="box-footer"></div>
   </div>
   </div>
-  </div>
+  <!-- </div> -->
     <!--Aqui finaliza el detalle del evaluacion medica-->
 <?php
 }

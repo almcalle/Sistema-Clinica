@@ -97,6 +97,24 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
       </div>
     </div>
          <!--////////////////////////////////////-->
+
+         <div class="box box-warning">
+         <div class="box-header with-border">
+           <h3 class="box-title"><i class="fa fa-folder-open"></i>Agudeza Visual</h3>
+         </div>
+         <div class="box-body">
+           <div class="col-lg-6">
+             <label>* Ojo Derecho</label>
+             <input type="text" maxlength="20" required="required" name="od" class="form-control" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+           </div>
+         <div class="col-lg-6">
+         <label>* Ojo Izquierdo</label>
+         <input type="text" maxlength="20" required="required" name="oi" class="form-control" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+         </div>
+         </div>
+         </div>
+
+
   <div class="box box-warning">
   <div class="box-header with-border">
     <h3 class="box-title"><i class="fa fa-folder-open"></i>Exploración por órganos aparatos y sistemas</h3>
@@ -124,7 +142,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
                 <input type="text" name="escoliosis" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
-                <label>* dental</label>
+                <label>* Dental</label>
                 <input type="text" name="dental" maxlength="200" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
