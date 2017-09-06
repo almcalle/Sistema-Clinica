@@ -101,7 +101,7 @@ include 'inc/inicio.inc';
         </div>
         <div class="col-lg-6">
           <label>Micción</label>
-          <input class="form-control" type="text" name="miccion" maxlength="20" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="miccion" maxlength="199" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-6">
           <label>Defecación</label>
@@ -121,15 +121,15 @@ include 'inc/inicio.inc';
       <div class="box-body">
         <div>
           <label>Enfermedades Crónicas</label>
-          <input class="form-control" type="text" name="enfe_cronicas" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="enfe_cronicas" maxlength="199" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div>
           <label>Medicamentos que actualmente</label>
-          <input class="form-control" type="text" name="medicamentos" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="medicamentos" maxlength="199" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div>
           <label>Antecedentes Alérgicos</label>
-          <input class="form-control" type="text" name="ante_alergicos" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="ante_alergicos" maxlength="199" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>

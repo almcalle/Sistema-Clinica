@@ -32,7 +32,7 @@ if ($reg==0) {
     echo"
     <div class=\"col-lg-12\">
     <div class=\"alert alert-block alert-info\">
-	<h4>Lo sentimos!</h4>El Registro no fue encontrado.<a href='../nuevaFicha.php'> Registrar una nueva ficha?".$identidad."</a>
+	<h4>Lo sentimos!</h4>El Registro con ID ".$identidad." no fue encontrado.<a href='nuevaFicha.php'> Registrar una nueva ficha?</a>
 	</div></div>";
 } else {
     $Ficha = mysql_fetch_array($registro);
@@ -161,6 +161,51 @@ if ($reg==0) {
 </div>
     <!-- </div> -->
 <!--Aqui finaliza el detalle del examen fisico-->
+<!--Aqui comienza el detalle de la evaluacion medica-->
+<?php
+$sql = mysql_query("select * from evaluaciones where identidad='".$identidad."' ORDER BY `fecha` DESC");
+$evaluacion = mysql_fetch_array($sql); ?>
+<!-- <div class="container"> -->
+<div class="col-lg-6">
+<div class="panel panel-warning">
+<div class="panel-heading"><h3><i class="fa fa-folder-open"></i>Ficha de Evaluación Medica</h3>
+<!-- /.box-tools -->
+</div>
+
+<!-- /.box-header -->
+
+<div class="panel-body">
+<dl>
+    <dt>Estrabismo:</dt>
+    <dd><?php echo $evaluacion['estrabismo']; ?></dd>
+    <dt>Pérdida Auditiva:</dt>
+    <dd><?php echo $evaluacion['perdida_auditiva']; ?></dd>
+    <dt>Trastornos de Formación:</dt>
+    <dd><?php echo $evaluacion['transtorno_fonacion']; ?></dd>
+    <dt>Pediculosis:</dt>
+    <dd><?php echo $evaluacion['pediculosis']; ?></dd>
+    <dt>Escabiosis o Sarna:</dt>
+    <dd><?php echo $evaluacion['sarna']; ?></dd>
+    <dt>Sospecha de Anemia:</dt>
+    <dd><?php echo $evaluacion['anemia']; ?></dd>
+    <dt>Sospecha de Violencia:</dt>
+    <dd><?php echo $evaluacion['violencia']; ?></dd>
+    <dt>Problemas de Personalidad:</dt>
+    <dd><?php echo $evaluacion['problemas_personalidad']; ?></dd>
+    <dt>Problemas de Aprendizaje:</dt>
+    <dd><?php echo $evaluacion['problemas_aprendizaje']; ?></dd>
+    <dt>Uso de Drogas:</dt>
+    <dd><?php echo $evaluacion['uso_drogas']; ?></dd>
+
+    <dt>Fecha:</dt>
+    <dd><?php echo $evaluacion['fecha']; ?></dd>
+</dl>
+</div>
+<div class="box-footer"></div>
+</div>
+</div>
+<!-- </div> -->
+<!--Aqui finaliza el detalle del evaluacion medica-->
 
 <!--Aqui comienza el detalle del Anamnesis-->
 
@@ -242,51 +287,7 @@ if ($reg==0) {
 </div>
 <!-- </div> -->
     <!--Aqui finaliza el detalle del diagnostico-->
-    <!--Aqui comienza el detalle de la evaluacion medica-->
-    <?php
-    $sql = mysql_query("select * from evaluaciones where identidad='".$identidad."' ORDER BY `fecha` DESC");
-    $evaluacion = mysql_fetch_array($sql); ?>
-  <!-- <div class="container"> -->
-  <div class="col-lg-6">
-    <div class="panel panel-warning">
-  <div class="panel-heading"><h3><i class="fa fa-folder-open"></i>Ficha de Evaluación Medica</h3>
-  <!-- /.box-tools -->
-  </div>
 
-  <!-- /.box-header -->
-
-  <div class="panel-body">
-  <dl>
-        <dt>Estrabismo:</dt>
-        <dd><?php echo $evaluacion['estrabismo']; ?></dd>
-        <dt>Pérdida Auditiva:</dt>
-        <dd><?php echo $evaluacion['perdida_auditiva']; ?></dd>
-        <dt>Trastornos de Formación:</dt>
-        <dd><?php echo $evaluacion['transtorno_fonacion']; ?></dd>
-        <dt>Pediculosis:</dt>
-        <dd><?php echo $evaluacion['pediculosis']; ?></dd>
-        <dt>Escabiosis o Sarna:</dt>
-        <dd><?php echo $evaluacion['sarna']; ?></dd>
-        <dt>Sospecha de Anemia:</dt>
-        <dd><?php echo $evaluacion['anemia']; ?></dd>
-        <dt>Sospecha de Violencia:</dt>
-        <dd><?php echo $evaluacion['violencia']; ?></dd>
-        <dt>Problemas de Personalidad:</dt>
-        <dd><?php echo $evaluacion['problemas_personalidad']; ?></dd>
-        <dt>Problemas de Aprendizaje:</dt>
-        <dd><?php echo $evaluacion['problemas_aprendizaje']; ?></dd>
-        <dt>Uso de Drogas:</dt>
-        <dd><?php echo $evaluacion['uso_drogas']; ?></dd>
-
-        <dt>Fecha:</dt>
-        <dd><?php echo $evaluacion['fecha']; ?></dd>
-    </dl>
-  </div>
-    <div class="box-footer"></div>
-  </div>
-  </div>
-  <!-- </div> -->
-    <!--Aqui finaliza el detalle del evaluacion medica-->
 <?php
 }
 mysql_close($conexion);

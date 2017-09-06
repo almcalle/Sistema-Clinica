@@ -13,8 +13,8 @@ if(isset ($_POST['identidad'])){
     $escoliosis = $_POST["escoliosis"];
     $dental = $_POST["dental"];
 
-    $oidoDerecho = $_POST["od"];
-    $oidoIzquierdo = $_POST["oi"];
+    $ojoDerecho = $_POST["od"];
+    $ojoIzquierdo = $_POST["oi"];
 
     $nariz = $_POST["nariz"];
     $coello = $_POST["coello"];
