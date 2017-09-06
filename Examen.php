@@ -40,7 +40,6 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
             <div class="widget-user-header bg-black" style="background: url('../dist/img/photo1.png') center center;">
               <div class="widget-user-image">
               <br>
-              <!-- <center><img class="img-circle" src="<?php echo "img/".$Ficha['foto']; ?>" alt="<?php echo "img/".$Ficha['foto']; ?>" id="fotoGrande" /></center> -->
               </div>
               <!-- /.widget-user-image -->
               <center>
@@ -72,27 +71,27 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
         <div class="col-lg-2">
 
           <label>PA:</label>
-          <input class="form-control" type="number" name="pa" maxlength="10" required="required" placeholder="70/100" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="number" min="0" step="0.01" name="pa" maxlength="10" required="required" placeholder="70/100" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
-          <label>FR: (PX) (RPM)</label>
-          <input class="form-control" type="number" name="fr" maxlength="10" required="required"  onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <label>FR: (RPM)</label>
+          <input class="form-control" type="number" min="0" step="0.01" name="fr" maxlength="10" required="required"  onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
           <label>Temperatura (º):</label>
-          <input class="form-control" type="number" name="t" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="number" name="t" min="0" step="0.01" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
         <label>Peso (Kilos):</label>
-          <input class="form-control" type="number" name="peso" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="number" min="0" step="0.01" name="peso" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
           <label>Talla:</label>
-          <input class="form-control" type="number" name="talla" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="number" name="talla" min="0" step="0.01" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
         <label>IMC:</label>
-          <input class="form-control" type="number" name="imc" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="number" min="0" step="0.01"  name="imc" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>
