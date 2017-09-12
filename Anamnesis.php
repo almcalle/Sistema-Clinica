@@ -97,19 +97,19 @@ include 'inc/inicio.inc';
       <div class="box-body">
         <div class="col-lg-6">
           <label>Apetito</label>
-          <input class="form-control" type="text" name="apetito" maxlength="20" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="apetito" maxlength="199" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-6">
           <label>Micción</label>
-          <input class="form-control" type="text" name="miccion" maxlength="199" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="miccion" maxlength="199" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-6">
           <label>Defecación</label>
-          <input class="form-control" type="text" name="defecacion" maxlength="20" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="defecacion" maxlength="199" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-6">
         <label>Sueño</label>
-          <input class="form-control" type="text" name="sueno" maxlength="20" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="sueno" maxlength="199" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>
@@ -121,15 +121,15 @@ include 'inc/inicio.inc';
       <div class="box-body">
         <div>
           <label>Enfermedades Crónicas</label>
-          <input class="form-control" type="text" name="enfe_cronicas" maxlength="199" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="enfe_cronicas" maxlength="199" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div>
           <label>Medicamentos que actualmente</label>
-          <input class="form-control" type="text" name="medicamentos" maxlength="199" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="medicamentos" maxlength="199" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div>
           <label>Antecedentes Alérgicos</label>
-          <input class="form-control" type="text" name="ante_alergicos" maxlength="199" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="ante_alergicos" maxlength="199" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>
@@ -141,7 +141,7 @@ include 'inc/inicio.inc';
       <div class="box-body">
         <div>
           <label>Hábitos Tóxicos</label>
-          <input class="form-control" type="text" name="habitos_toxicos" maxlength="50" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="habitos_toxicos" maxlength="199" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>
@@ -153,7 +153,7 @@ include 'inc/inicio.inc';
       <div class="box-body">
         <div>
           <label>Antecedentes quirúrgicos / hospitalarios</label>
-          <input class="form-control" type="text" name="ant_hospitalarios" maxlength="100" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="ant_hospitalarios" maxlength="199" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>
@@ -167,7 +167,7 @@ include 'inc/inicio.inc';
       <div class="box-body">
         <div>
           <label>Historia de enfermedad actual</label>
-          <input class="form-control" type="text" name="historial_enfermedades" maxlength="100" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="historial_enfermedades" maxlength="199" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>
@@ -179,7 +179,7 @@ include 'inc/inicio.inc';
       <div class="box-body">
         <div>
           <label>Antecedentes patológicos familiares</label>
-          <input class="form-control" type="text" name="antecedentes_familiares" maxlength="100" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text" name="antecedentes_familiares" maxlength="199" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>

@@ -55,23 +55,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
             </div>
 <!--FIN del la ficha de consulta-->
 <form method="post" action="php/guardarEvaluacion.php" id="miForm">
-<!-- <div class="col-lg-12">
-  <div class="box box-danger">
-  <div class="box-header with-border">
-    <h3 class="box-title"><i class="fa fa-folder-open"></i>Agudeza Visual</h3>
-  </div>
-  <div class="box-body">
-  <div class="col-lg-6">
-  <label>* Ojo Izquierdo</label>
-  <input type="text" maxlength="20" required="required" name="oi" class="form-control" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-  </div>
-    <div class="col-lg-6">
-    <label>* Ojo Derecho</label>
-    <input type="text" maxlength="20" required="required" name="od" class="form-control" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
-  </div>
-</div>
-</div>
-    </div> -->
+
 <!--/////////////////////////////////////////////////////////////////////////////////////////////////-->
     <div class="col-lg-12">
         <div class="box box-primary">

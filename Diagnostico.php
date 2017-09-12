@@ -67,23 +67,23 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
             </div>
             <div>
                 <label>* Diagnostico Patológico</label>
-                <textarea name="patologico" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
+                <textarea name="patologico" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"></textarea>
             </div>
             <div>
                 <label>* Diagnostico Nutricional</label>
-                <textarea name="nutricional" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
+                <textarea name="nutricional" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"></textarea>
             </div>
             <div>
                 <label>* Diagnostico Socioeconómico</label>
-                <textarea name="socieconomico" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
+                <textarea name="socieconomico" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"></textarea>
             </div>
             <div>
                 <label>* Diagnostico Inmunológico</label>
-                <textarea name="inmunologico" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
+                <textarea name="inmunologico" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"></textarea>
             </div>
             <div>
                 <label>* Diagnostico Etario</label>
-                <textarea name="etario" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"></textarea>
+                <textarea name="etario" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"></textarea>
             </div>
             <div>
             <br>

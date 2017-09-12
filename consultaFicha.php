@@ -31,7 +31,7 @@ include 'inc/inicio.inc';
         $registro = mysql_query("SELECT DISTINCT * FROM ficha ") or die(mysql_error());
 
 
-      echo '<table id="example" class="display" cellspacing="0" width="100%">
+      echo '<table id="tabla" class="display" cellspacing="0" width="100%">
         <thead>
                       <tr>
                          <th width="100">IDENTIDAD</th>
@@ -47,12 +47,10 @@ include 'inc/inicio.inc';
         echo'<tr>
                   <td>'.$registro2['identidad'].'</td>
                   <td>'.$nombre['nombre'].'</td>
-                        <td><a href="detalleFicha.php?id='.$registro2['identidad'].'" class="glyphicon glyphicon-search" data-toggle="tooltip" title="Ver Detalle"></a>&nbsp;&nbsp;&nbsp;<a href="javascript:borrarFicha('.$registro2['identidad'].');" class="fa fa-trash" data-toggle="tooltip" title="borrar Ficha"></a>
-                        &nbsp;&nbsp;&nbsp;<a href="Examen.php?id='.$registro2['identidad'].'" class="fa fa-external-link" data-toggle="tooltip" title="Nuevo Examen Fisíco"></a>
-				        &nbsp;&nbsp;&nbsp;<a href="Evaluacion.php?id='.$registro2['identidad'].'" class="fa fa-pencil-square" data-toggle="tooltip" title="Nueva Evaluación"></a>
-                        &nbsp;&nbsp;&nbsp;<a href="Anamnesis.php?id='.$registro2['identidad'].'" class="fa fa-pencil" data-toggle="tooltip" title="Nuevo Anamnesis"></a>
-                        &nbsp;&nbsp;&nbsp;<a href="Diagnostico.php?id='.$registro2['identidad'].'" class="fa fa-server" data-toggle="tooltip" title="Nuevo Diagnostico"></a>
-				</td>
+                        <td><a href="detalleFicha.php?id='.$registro2['identidad'].'" class="glyphicon glyphicon-search" data-toggle="tooltip" title="Ver Detalle"></a>
+                        &nbsp;&nbsp;&nbsp;<a href="editarFicha.php?id='.$registro2['identidad'].'" class="fa fa-edit" data-toggle="tooltip" title="Editar Ficha"></a>
+                        &nbsp;&nbsp;&nbsp;<a href="javascript:borrarFicha('.$registro2['identidad'].');" class="fa fa-trash" data-toggle="tooltip" title="Borrar Ficha"></a>
+                        	</td>
 				</tr>';
       }
         echo '</tbody></table>';
@@ -98,7 +96,7 @@ include 'inc/scripts.inc';
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#example').DataTable();
+    $('#tabla').DataTable();
 } );
 </script>
 <?php

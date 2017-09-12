@@ -1,0 +1,9 @@
+#Instalación de la base de datos
+*Instalar el XAMPP
+*Arrancar el servidor apache y Mysql
+*Descargarse el zip con el programa
+*En la carpeta C:/xampp/htdocs y copiar el programa descomprimido
+*Ejecutar el contenido de DB.sql
+*Listo
+
+Para acceder a la base de datos use un navegador web (Preferiblemente Google Chrome) y escribir localhost/Sistema-clinica/

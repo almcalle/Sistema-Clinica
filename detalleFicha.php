@@ -38,7 +38,7 @@ if ($reg==0) {
     $Ficha = mysql_fetch_array($registro);
     //CREAMOS NUESTRA VISTA Y LA DEVOLVEMOS AL AJAX ?>
 
-<div class="col-lg-6">
+<div class="col-lg-12">
 <div class="box box-warning">
 <div class="box-header with-border">
   <h3 class="box-title"><i class="fa fa-folder-open"></i>Ficha de Salud Escolar</h3>
@@ -77,6 +77,10 @@ if ($reg==0) {
     	<i class="fa fa-bitbucket"></i> Borrar Ficha
     </a>
 
+    <a class="btn btn-app" href="editarFicha.php?id=<?php echo $identidad; ?>">
+      <i class="fa fa-edit"></i> Editar Ficha
+    </a>
+
     <a class="btn btn-app" href="Examen.php?id=<?php echo $identidad; ?>">
     	<i class="fa fa-plus"></i>  Examen Físico
     </a>
@@ -98,7 +102,7 @@ if ($reg==0) {
 <!--Aqui comienza el detalle del examen fisico-->
 
 <!-- <div class="container"> -->
-<div class="col-lg-6">
+<div class="col-lg-12">
 <div class="panel panel-warning">
 <div class="panel-heading">
   <h3><i class="fa fa-folder-open"></i>Ficha de Examen Físico</h3>
@@ -166,7 +170,7 @@ if ($reg==0) {
 $sql = mysql_query("select * from evaluaciones where identidad='".$identidad."' ORDER BY `fecha` DESC");
 $evaluacion = mysql_fetch_array($sql); ?>
 <!-- <div class="container"> -->
-<div class="col-lg-6">
+<div class="col-lg-12">
 <div class="panel panel-warning">
 <div class="panel-heading"><h3><i class="fa fa-folder-open"></i>Ficha de Evaluación Medica</h3>
 <!-- /.box-tools -->
@@ -210,7 +214,7 @@ $evaluacion = mysql_fetch_array($sql); ?>
 <!--Aqui comienza el detalle del Anamnesis-->
 
 <!-- <div class="container"> -->
-<div class="col-lg-6">
+<div class="col-lg-12">
 <div class="panel panel-warning">
 <div class="panel-heading">
   <h3><i class="fa fa-folder-open"></i>Ficha de Anamnesis</h3>
@@ -256,7 +260,7 @@ $evaluacion = mysql_fetch_array($sql); ?>
     $sql = mysql_query("select * from diagnosticos where identidad='".$identidad."' ORDER BY `fecha` DESC");
     $diagnostico = mysql_fetch_array($sql); ?>
 <!-- <div class="container"> -->
-<div class="col-lg-6">
+<div class="col-lg-12">
     <div class="panel panel-warning">
 <div class="panel-heading"><h3><i class="fa fa-folder-open"></i>Ficha de Diagnostico</h3>
 <!-- /.box-tools -->

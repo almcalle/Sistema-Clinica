@@ -26,10 +26,10 @@ else{
 					   <dd><?php echo $ficha['identidad'];?></dd>
 					   <dt>Nombre:</dt>
 					   <dd><?php echo $ficha['nombre'];?></dd>
-					   <dt>Ojo Izquierdo:</dt>
+					   <!-- <dt>Ojo Izquierdo:</dt>
 					   <dd><?php echo $Evaluacion['ojo_izquierdo'];?></dd>
 					   <dt>Ojo Derecho:</dt>
-					   <dd><?php echo $Evaluacion['ojo_derecho'];?></dd>
+					   <dd><?php echo $Evaluacion['ojo_derecho'];?></dd> -->
 					   <dt>Estrabismo:</dt>
 					   <dd><?php echo $Evaluacion['estrabismo'];?></dd>
 					   <dt>Perdida Auditiva:</dt>

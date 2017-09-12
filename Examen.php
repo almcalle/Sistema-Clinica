@@ -71,27 +71,27 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
         <div class="col-lg-2">
 
           <label>PA:</label>
-          <input class="form-control" type="number" min="0" step="0.01" name="pa" maxlength="10" required="required" placeholder="70/100" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="number" min="0" step="0.01" name="pa" maxlength="10" required="required" placeholder="70/100" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
           <label>FR: (RPM)</label>
-          <input class="form-control" type="number" min="0" step="0.01" name="fr" maxlength="10" required="required"  onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="number" min="0" step="0.01" name="fr" maxlength="10" required="required"  onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
           <label>Temperatura (º):</label>
-          <input class="form-control" type="number" name="t" min="0" step="0.01" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="number" name="t" min="0" step="0.01" maxlength="10" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
         <label>Peso (Kilos):</label>
-          <input class="form-control" type="number" min="0" step="0.01" name="peso" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input id="peso" class="form-control" type="number" min="0" step="0.01" name="peso" maxlength="10" required="required" onBlur="calcularIMC();"/>
         </div>
         <div class="col-lg-2">
-          <label>Talla:</label>
-          <input class="form-control" type="number" name="talla" min="0" step="0.01" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <label>Talla (Metros):</label>
+          <input id="talla" class="form-control" type="number" name="talla" min="0" step="0.01" maxlength="10" required="required" onBlur="calcularIMC();"/>
         </div>
         <div class="col-lg-2">
         <label>IMC:</label>
-          <input class="form-control" type="number" min="0" step="0.01"  name="imc" maxlength="10" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+          <input id="imc" class="form-control" readonly="readonly"  type="number" min="0" step="0.01"  name="imc" maxlength="10" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
       </div>
     </div>
@@ -104,11 +104,11 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
          <div class="box-body">
            <div class="col-lg-6">
              <label>* Ojo Derecho</label>
-             <input type="text" maxlength="20" required="required" name="od" class="form-control" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+             <input type="text" maxlength="20" required="required" name="od" class="form-control" onBlur="javascript:this.value=this.value.toUpperCase();"/>
            </div>
          <div class="col-lg-6">
          <label>* Ojo Izquierdo</label>
-         <input type="text" maxlength="20" required="required" name="oi" class="form-control" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+         <input type="text" maxlength="20" required="required" name="oi" class="form-control" onBlur="javascript:this.value=this.value.toUpperCase();"/>
          </div>
          </div>
          </div>
@@ -122,58 +122,58 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
 
             <div>
                 <label>* Cabeza</label>
-                <input type="text" name="cabeza" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="cabeza" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
                 <label>* Oídos</label>
-                <input type="text" name="oidos" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="oidos" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
                 <label>* Nariz</label>
-                <input type="text" name="nariz" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="nariz" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
                 <label>* Faringe</label>
-                <input type="text" name="faringe" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="faringe" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
                 <label>* Escoliosis</label>
-                <input type="text" name="escoliosis" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="escoliosis" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
                 <label>* Dental</label>
-                <input type="text" name="dental" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="dental" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
                 <label>* Cuello</label>
-                <input type="text" name="coello" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="coello" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             <div>
                 <label>* Tórax</label>
-                <input type="text" name="torax" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+                <input type="text" name="torax" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* Corazón</label>
-              <input type="text" name="corazon" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="corazon" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* Abdomen</label>
-              <input type="text" name="abdomen" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="abdomen" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* Genitales</label>
-              <input type="text" name="genitales" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="genitales" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* Extremidades</label>
-              <input type="text" name="extremidades" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="extremidades" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* Piel y faneras</label>
-              <input type="text" name="piel" maxlength="199" class="form-control" required="required" onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="piel" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* OBSERVACION</label>
-              <input type="text" name="observaciones" maxlength="199" class="form-control"  onkeyup="javascript:this.value=this.value.toUpperCase();"/>
+              <input type="text" name="observaciones" maxlength="199" class="form-control"  onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <br>
@@ -205,6 +205,18 @@ include 'inc/scripts.inc';
     document.getElementById("miForm").reset();
   }
 </script>
+
+<script type="text/javascript">
+function calcularIMC() {
+var talla = $("#talla").val();
+var peso=$("#peso").val();
+var imc=peso/(talla*talla);
+
+$("#imc").val(imc);
+}
+</script>
+
+
 <?php
 include 'inc/plugins.inc';
 include 'inc/fin.inc';
