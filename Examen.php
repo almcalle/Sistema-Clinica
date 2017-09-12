@@ -212,7 +212,7 @@ var talla = $("#talla").val();
 var peso=$("#peso").val();
 var imc=peso/(talla*talla);
 
-$("#imc").val(imc);
+$("#imc").val(imc.toFixed(2));
 }
 </script>
 
