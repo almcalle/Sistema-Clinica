@@ -32,7 +32,7 @@ if ($reg==0) {
     echo"
     <div class=\"col-lg-12\">
     <div class=\"alert alert-block alert-info\">
-	<h4>Lo sentimos!</h4>El Registro con ID ".$identidad." no fue encontrado.<a href='nuevaFicha.php'> Registrar una nueva ficha?</a>
+	<h4>¡Lo sentimos!</h4>El Registro con ID ".$identidad." no fue encontrado. <a href='nuevaFicha.php'>¿Registrar una nueva ficha?</a>
 	</div></div>";
 } else {
     $Ficha = mysql_fetch_array($registro);
@@ -117,7 +117,7 @@ if ($reg==0) {
         <dd><?php echo $examen['pa']; ?></dd>
         <dt>FR:</dt>
         <dd><?php echo $examen['fr']; ?></dd>
-        <dt>Temperatura:</dt>
+        <dt>Temperatura (ºC):</dt>
         <dd><?php echo $examen['temperatura']; ?></dd>
         <dt>Peso:</dt>
         <dd><?php echo $examen['peso']; ?></dd>
@@ -129,6 +129,8 @@ if ($reg==0) {
         <dd><?php echo $examen['ojo_derecho']; ?></dd>
         <dt>Ojo Izquierdo:</dt>
         <dd><?php echo $examen['ojo_izquierdo']; ?></dd>
+        <dt>Observaciones Visual:</dt>
+        <dd><?php echo $examen['observaciones_visual']; ?></dd>
         <dt>Cabeza:</dt>
         <dd><?php echo $examen['cabeza']; ?></dd>
         <dt>Oidos:</dt>
@@ -160,6 +162,9 @@ if ($reg==0) {
         <dt>Fecha:</dt>
         <dd><?php echo $examen['fecha']; ?></dd>
     </dl><br/>
+    <a class="btn btn-app" href="editarExamenFisico.php?idExamen=<?php echo $examen['id']; ?>">
+      <i class="fa fa-edit"></i> Editar Examen Físico
+    </a>
 </div>
 </div>
 </div>

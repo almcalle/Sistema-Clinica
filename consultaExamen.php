@@ -51,7 +51,13 @@ include 'inc/inicio.inc';
                   <td>'.$registro2['identidad'].'</td>
                   <td>'.$nombre['nombre'].'</td>
                    <td>'.$registro2['fecha'].'</td>
-                        <td><a href="javascript:detalleExamen('.$registro2['id'].');" class="glyphicon glyphicon-search" data-toggle="tooltip" title="Ver Detalle"></a>&nbsp;&nbsp;&nbsp;<a href="javascript:borrarExamen('.$registro2['id'].');" class="fa fa-trash" data-toggle="tooltip" title="borrar Examen"></a></td>
+                        <td>
+                        <a href="javascript:detalleExamen('.$registro2['id'].');" class="glyphicon glyphicon-search" data-toggle="tooltip" title="Ver Detalle"></a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="editarExamenFisico.php?idExamen='.$registro2['id'].'" class="glyphicon glyphicon-edit" data-toggle="tooltip" title="Editar Examen Físico"></a>
+
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="javascript:borrarExamen('.$registro2['id'].');" class="fa fa-trash" data-toggle="tooltip" title="borrar Examen"></a></td>
                    </tr>';
       }
         echo '</tbody></table>';

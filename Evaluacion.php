@@ -82,7 +82,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
                     </select>
                 </div>
                 <div class="col-lg-3">
-                <label>Trastornos de Formación</label>
+                <label>Trastornos de Fonación</label>
                     <select name="tf" class="form-control">
                     <option value="No">No</option>
                     <option value="Si">Si</option>

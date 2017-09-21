@@ -42,11 +42,7 @@ include 'inc/inicio.inc';
             <div class="box-header with-border">
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
-					<input type="submit" class="btn btn-warning btn-flat pull-right" value="Guardar Ficha"/>
-					<!-- <a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a> -->
-            </div>
-            <!-- /.box-body -->
+
           </div>
           <!-- /.box -->
         </div>
@@ -131,7 +127,7 @@ include 'inc/inicio.inc';
 	    				</div>
 	    				<div class="form-group"><!--Direccion-->
 	    				<label for="form-group">Dirección</label>
-	    					<input value="<?php echo $Ficha['direccion']; ?>" name="direccion" onBlur="javascript:this.value=this.value.toUpperCase();" type="text" maxlength="60" class="form-control" style="text-transform:uppercase;"/>
+	    					<input value="<?php echo $Ficha['direccion']; ?>" name="direccion" onBlur="javascript:this.value=this.value.toUpperCase();" type="text" maxlength="199" class="form-control" style="text-transform:uppercase;"/>
 	    				</div>
 	    				<div class="form-group">
 	    					<label for="municipio">* Municipio</label>
@@ -158,7 +154,11 @@ include 'inc/inicio.inc';
 				</div>
 				</div>
 			</div> -->
-
+      <div class="box-body">
+    <input type="submit" class="btn btn-warning btn-flat pull-right" value="Editar Ficha"/>
+    <!-- <a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a> -->
+      </div>
+      <!-- /.box-body -->
           </form>
          	</div>
          </div>

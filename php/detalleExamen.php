@@ -27,42 +27,54 @@ else{
         <dd><?php echo $ficha['identidad'];?></dd>
         <dt>Nombre:</dt>
         <dd><?php echo $ficha['nombre'];?></dd>
-        <dt>Pa:</dt>
-        <dd><?php echo $examen['pa'];?></dd>
-        <dt>Fr:</dt>
-        <dd><?php echo $examen['fr'];?></dd>
-        <dt>Temperatura:</dt>
-        <dd><?php echo $examen['temperatura'];?></dd>
+				<dt>PA:</dt>
+        <dd><?php echo $examen['pa']; ?></dd>
+        <dt>FR:</dt>
+        <dd><?php echo $examen['fr']; ?></dd>
+        <dt>Temperatura (ºC):</dt>
+        <dd><?php echo $examen['temperatura']; ?></dd>
         <dt>Peso:</dt>
-        <dd><?php echo $examen['peso'];?></dd>
+        <dd><?php echo $examen['peso']; ?></dd>
         <dt>Talla:</dt>
-        <dd><?php echo $examen['talla'];?></dd>
+        <dd><?php echo $examen['talla']; ?></dd>
         <dt>IMC:</dt>
-        <dd><?php echo $examen['imc'];?></dd>
+        <dd><?php echo $examen['imc']; ?></dd>
+        <dt>Ojo Derecho:</dt>
+        <dd><?php echo $examen['ojo_derecho']; ?></dd>
+        <dt>Ojo Izquierdo:</dt>
+        <dd><?php echo $examen['ojo_izquierdo']; ?></dd>
+				<dt>Observaciones Visual:</dt>
+        <dd><?php echo $examen['observaciones_visual']; ?></dd>
         <dt>Cabeza:</dt>
-        <dd><?php echo $examen['cabeza'];?></dd>
-        <dt>Oídos:</dt>
-        <dd><?php echo $examen['oidos'];?></dd>
+        <dd><?php echo $examen['cabeza']; ?></dd>
+        <dt>Oidos:</dt>
+        <dd><?php echo $examen['oidos']; ?></dd>
         <dt>Nariz:</dt>
-        <dd><?php echo $examen['nariz'];?></dd>
-        <dt>Coello:</dt>
-        <dd><?php echo $examen['coello'];?></dd>
-        <dt>Tórax:</dt>
-        <dd><?php echo $examen['torax'];?></dd>
-        <dt>Corazón:</dt>
-        <dd><?php echo $examen['corazon'];?></dd>
+        <dd><?php echo $examen['nariz']; ?></dd>
+        <dt>Faringe:</dt>
+        <dd><?php echo $examen['faringe']; ?></dd>
+        <dt>Escoliosis:</dt>
+        <dd><?php echo $examen['escoliosis']; ?></dd>
+        <dt>Dental:</dt>
+        <dd><?php echo $examen['dental']; ?></dd>
+        <dt>Cuello:</dt>
+        <dd><?php echo $examen['coello']; ?></dd>
+        <dt>Torax:</dt>
+        <dd><?php echo $examen['torax']; ?></dd>
+        <dt>Corazon:</dt>
+        <dd><?php echo $examen['corazon']; ?></dd>
         <dt>Abdomen:</dt>
-        <dd><?php echo $examen['abdomen'];?></dd>
+        <dd><?php echo $examen['abdomen']; ?></dd>
         <dt>Genitales:</dt>
-        <dd><?php echo $examen['genitales'];?></dd>
+        <dd><?php echo $examen['genitales']; ?></dd>
         <dt>Extremidades:</dt>
-        <dd><?php echo $examen['extremidades'];?></dd>
-        <dt>Piel y faneras:</dt>
-        <dd><?php echo $examen['piel'];?></dd>
+        <dd><?php echo $examen['extremidades']; ?></dd>
+        <dt>Piel:</dt>
+        <dd><?php echo $examen['piel']; ?></dd>
         <dt>Observaciones:</dt>
-        <dd><?php echo $examen['observaciones'];?></dd>
+        <dd><?php echo $examen['observaciones']; ?></dd>
         <dt>Fecha:</dt>
-        <dd><?php echo $examen['fecha'];?></dd>
+        <dd><?php echo $examen['fecha']; ?></dd>
     </dl><br/>
 </div>
 </div>

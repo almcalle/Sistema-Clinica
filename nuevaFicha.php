@@ -33,11 +33,8 @@ include 'inc/inicio.inc';
             <div class="box-header with-border">
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
-					<input type="submit" class="btn btn-warning btn-flat pull-right" value="Guardar Ficha"/>
-					<a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a>
-            </div>
-            <!-- /.box-body -->
+
+
           </div>
           <!-- /.box -->
         </div>
@@ -49,9 +46,10 @@ include 'inc/inicio.inc';
 	    			<h3 class="box-title">INFORMACIÓN PERSONAL</h3>
 	    			</div>
 	    			<div class="box-body">
-	    				<div class="form-group"><!--Numero de identidad-->
+	    				<div class="form-group">
+                <!--Numero de identidad-->
 	    					<label for="identidad">* Numero de identidad</label>
-							<input class="form-control" maxlength="13" required="required" type="number" name="identidad" placeholder="" onkeypress="return soloNumero(event)"/>
+							<input class="form-control" maxlength="13" required="required" type="text" name="identidad" placeholder="" onkeypress="return soloNumero(event)"/>
 	    				</div>
 	    				<div class="form-group">
 	    					<label for="nombre">* Nombre de niño(a)</label>
@@ -122,7 +120,7 @@ include 'inc/inicio.inc';
 	    				</div>
 	    				<div class="form-group"><!--Direccion-->
 	    				<label for="form-group">Dirección</label>
-	    					<input name="direccion"  type="text" maxlength="60" class="form-control" onBlur="javascript:this.value=this.value.toUpperCase();"/>
+	    					<input name="direccion"  type="text" maxlength="199" class="form-control" onBlur="javascript:this.value=this.value.toUpperCase();"/>
 	    				</div>
 	    				<div class="form-group">
 	    					<label for="municipio">* Municipio</label>
@@ -150,7 +148,12 @@ include 'inc/inicio.inc';
 				</div>
 			</div> -->
 
-          </form>
+          <div class="box-body">
+        <input type="submit" class="btn btn-warning btn-flat pull-right" value="Guardar Ficha"/>
+        <a href="javascript:limpiar();" class="btn btn-danger btn-flat pull-right">Limpiar Ficha</a>
+          </div>
+        </form>
+          <!-- /.box-body -->
          	</div>
          </div>
          </div>

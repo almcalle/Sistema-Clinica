@@ -41,8 +41,13 @@ if (isset($_POST['identidad']) and isset($_POST['nombre'])) {
 			echo "<script>window.location = '../detalleFicha.php?id=".$identidad."'</script>";
 		}
 		else {
-			echo '<script type="text/javascript">alert("El No. de identidad no se encuentra registrado");</script>';
-			echo "<script>window.location = '../nuevaFicha.php'</script>";
+
+			mysql_query("insert into ficha(identidad,nombre,fecha_nacimiento,edad,responsable,grado,seccion,escuela,direccion,municipio,departamento,contacto_responsable) values('".$identidad."','".$nombre."','".$fecha."','".$edad."','".$responsable."','".$grado."','".$seccion."','".$escuela."','".$direccion."','".$municipio."','".$departamento."','".$tel_responsable."')") or die(mysql_error());
+			// echo '<script type="text/javascript">alert("Ficha Guardada");</script>';
+			echo '<script type="text/javascript">alert("El No. de identidad no se encuentra registrado, se guarda una nueva ficha");</script>';
+			echo "<script>window.location = '../detalleFicha.php?id=".$identidad."'</script>";
+
+			// echo "<script>window.location = '../nuevaFicha.php'</script>";
 		}
 		mysql_close();
 }
