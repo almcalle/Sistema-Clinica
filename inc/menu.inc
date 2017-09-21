@@ -60,6 +60,17 @@
                     <li><a href="consultaFicha.php"><i class="fa fa-circle-o text-orange"></i> Control Ficha</a></li>
                   </ul>
                 </li>
+                <!--Busqueda-->
+                <li class="treeview">
+                  <a href="busqueda.php">
+                    <i class="fa fa-search"></i>
+                    <span>Busqueda</span>
+                    <!-- <i class="fa fa-angle-left pull-right"></i> -->
+                  </a>
+                  <!-- <ul class="treeview-menu">
+                    <li><a href="consultaExamen.php"><i class="fa fa-circle-o text-orange"></i> Consultar Examen Físico</a></li>
+                  </ul> -->
+                </li>
                 <!--Examen Físico-->
                 <li class="treeview">
                   <a href="#">
