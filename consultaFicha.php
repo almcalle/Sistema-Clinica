@@ -36,17 +36,20 @@ include 'inc/inicio.inc';
                       <tr>
                          <th width="100">IDENTIDAD</th>
                          <th width="200">NOMBRE</th>
+                         <th width="200">CLASE</th>
+
                     <th width="100">ACCIONES</th>
                       </tr>
         </thead>
          <tbody>';
 
       while($registro2 = mysql_fetch_array($registro)){
-        $consulta = mysql_query("select nombre from ficha where identidad='".$registro2['identidad']."'") or die(mysql_error());
-        $nombre = mysql_fetch_array($consulta);
+      
         echo'<tr>
                   <td>'.$registro2['identidad'].'</td>
-                  <td>'.$nombre['nombre'].'</td>
+                  <td>'.$registro2['nombre'].'</td>
+                  <td>'.$registro2['grado'].'-'.$registro2[seccion].'</td>
+
                         <td><a href="detalleFicha.php?id='.$registro2['identidad'].'" class="glyphicon glyphicon-search" data-toggle="tooltip" title="Ver Detalle"></a>
                         &nbsp;&nbsp;&nbsp;<a href="editarFicha.php?id='.$registro2['identidad'].'" class="fa fa-edit" data-toggle="tooltip" title="Editar Ficha"></a>
                         &nbsp;&nbsp;&nbsp;<a href="javascript:borrarFicha('.$registro2['identidad'].');" class="fa fa-trash" data-toggle="tooltip" title="Borrar Ficha"></a>

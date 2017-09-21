@@ -309,7 +309,7 @@ value="cabeza">Cabeza</option>
 	    				<div class="form-group">
                 <!--Numero de identidad-->
 	    					<label for="busqueda">Búsqueda en ese campo</label>
-							<input value="<?php echo $busqueda; ?>" class="form-control" required="required" type="text" name="busqueda" placeholder=""/>
+							<input value="<?php echo $busqueda; ?>" class="form-control"  type="text" name="busqueda" placeholder=""/>
 	    				</div>
               </div>
               <div class="box-body">

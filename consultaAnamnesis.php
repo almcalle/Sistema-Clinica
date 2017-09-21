@@ -37,6 +37,7 @@ include 'inc/inicio.inc';
                       <th width="100">ID</th>
                          <th width="100">IDENTIDAD</th>
                          <th width="200">NOMBRE</th>
+                         <th width="200">CLASE</th>
                           <th width="200">FECHA</th>
                     <th width="100">ACCIONES</th>
                       </tr>
@@ -44,12 +45,13 @@ include 'inc/inicio.inc';
          <tbody>';
 
       while($registro2 = mysql_fetch_array($registro)){
-        $consulta = mysql_query("select nombre from ficha where identidad='".$registro2['identidad']."'") or die(mysql_error());
-        $nombre = mysql_fetch_array($consulta);
+        $consulta = mysql_query("select * from ficha where identidad='".$registro2['identidad']."'") or die(mysql_error());
+        $ficha = mysql_fetch_array($consulta);
         echo'<tr>
                 <td>'.$registro2['id'].'</td>
                   <td>'.$registro2['identidad'].'</td>
-                  <td>'.$nombre['nombre'].'</td>
+                  <td>'.$ficha['nombre'].'</td>
+                  <td>'.$ficha['grado'].'-'.$ficha[seccion].'</td>
                    <td>'.$registro2['fecha'].'</td>
                         <td><a href="javascript:detalleAnamnesis('.$registro2['id'].');" class="glyphicon glyphicon-search" data-toggle="tooltip" title="Ver Detalle"></a>&nbsp;&nbsp;&nbsp;<a href="javascript:borrarAnamnesis('.$registro2['id'].');" class="fa fa-trash" data-toggle="tooltip" title="borrar Evaluación"></a></td>
                    </tr>';
