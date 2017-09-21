@@ -41,7 +41,7 @@ include 'inc/inicio.inc';
               <!-- /.widget-user-image -->
               <center>
                 <h3 class="widget-user-username"><?php echo $Ficha['nombre']; ?></h3>
-                <h5 class="widget-user-desc"><?php echo $Ficha['grado'],"-",$Ficha['seccion']; ?></h5>
+                <h5 class="widget-user-desc"><?php echo $Ficha['grado'],"-",$Ficha['seccion']," (",$Ficha[edad]," años)"?></h5>
               </center>
               <br>
             </div>
