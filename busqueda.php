@@ -348,7 +348,8 @@ if (isset($_GET['busqueda']) && isset($_GET['campo'])) {
     //  echo "Query: ".$query;
     // echo " Resultado: ".$filas[$campo];
     echo " Cuenta: ".$cuenta." de ".$registros." registros";
-    echo " Porcentaje: ".$cuenta/$registros; ?>
+    $porcentaje=$cuenta/$registros*100;
+    echo "<br> Porcentaje: ".$porcentaje."%" ?>
 
   <div class="box box-warning">
     <div class="box-header with-border">

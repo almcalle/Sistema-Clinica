@@ -120,11 +120,11 @@ include 'inc/inicio.inc';
 	    				</div>
 	    				<div class="form-group"><!--Direccion-->
 	    				<label for="form-group">Dirección</label>
-	    					<input name="direccion"  type="text" maxlength="199" class="form-control" onBlur="javascript:this.value=this.value.toUpperCase();"/>
+	    					<input name="direccion" required="required" type="text" maxlength="199" class="form-control" onBlur="javascript:this.value=this.value.toUpperCase();"/>
 	    				</div>
 	    				<div class="form-group">
 	    					<label for="municipio">* Municipio</label>
-	    					<input  type="text" required="requied" name="municipio" value="DISTRITO CENTRAL" readonly="readonly" class="form-control"/>
+	    					<input  type="text" required="required" name="municipio" value="DISTRITO CENTRAL" readonly="readonly" class="form-control"/>
 	    				</div>
 	    				<div class="form-group"><!--Departamento-->
 	    					<label for="departamento">* Departamento</label>

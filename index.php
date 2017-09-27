@@ -7,7 +7,7 @@
       <p>Virgen de Suyapa</p>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
-        <p class="login-box-msg">Clinica medica iniciar sesión</p>
+        <p class="login-box-msg">Iniciar Sesión</p>
         <form method="post" action="php/validar-usuario.php">
           <div class="form-group has-feedback">
             <input type="text" class="form-control" name="usuario" value="" required="required" maxlength="8" placeholder="Usuario"/>
@@ -24,7 +24,7 @@
           </div>
         </form>
 		<br>
-        <a href="#" class="text-orange">Olvide mi contraseña</a><br>
+        <!-- <a href="#" class="text-orange">Olvide mi contraseña</a><br> -->
       </div><!-- /.login-box-body -->
     </div><!-- /.login-box -->
 <?php

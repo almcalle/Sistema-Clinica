@@ -12,7 +12,7 @@ include 'inc/menu.inc';
 	          </h1>
 	          <ol class="breadcrumb">
 	            <li><a href="#"><i class="fa fa-dashboard"></i> Panel de Control</a></li>
-	            <li class="active">Incio</li>
+	            <li class="active">Inicio</li>
 	          </ol>
 	    </section>
 
@@ -121,7 +121,7 @@ include 'inc/menu.inc';
 
         <!-- ./col -->
 
-              
+
         		<div class="col-xs-6">
         		  <!-- small box -->
          		 	<div class="small-box bg-info">
