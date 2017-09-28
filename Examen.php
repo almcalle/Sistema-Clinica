@@ -186,7 +186,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
             </div>
             <div>
             <label>* Genitales</label>
-              <input value="NORMAL" type="text" name="genitales" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
+              <input value="NO EXPLORADOS" type="text" name="genitales" maxlength="199" class="form-control" required="required" onBlur="javascript:this.value=this.value.toUpperCase();"/>
             </div>
             <div>
             <label>* Extremidades</label>

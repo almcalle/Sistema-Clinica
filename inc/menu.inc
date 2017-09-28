@@ -116,6 +116,18 @@
                   </a>
                 </li>
                 <!--fin dignostico-->
+                <!--Tratamiento-->
+                <li class="treeview">
+                  <a href="#">
+                    <i class="glyphicon glyphicon-inbox"></i>
+                    <span>Tratamiento</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                    <ul class="treeview-menu">
+                    <li><a href="consultaTratamiento.php"><i class="fa fa-circle-o text-orange"></i> Consultar Diagnostico</a></li>
+                    </ul>
+                  </a>
+                </li>
+                <!--fin Tratamiento-->
                 <!--MI INSTITUCION -->
 
           </ul>

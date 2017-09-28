@@ -93,6 +93,9 @@ if ($reg==0) {
     <a class="btn btn-app" href="Diagnostico.php?id=<?php echo $identidad; ?>">
       <i class="fa fa-plus"></i>  Diagnostico
     </a>
+    <a class="btn btn-app" href="nuevoTratamiento.php?id=<?php echo $identidad; ?>">
+      <i class="fa fa-plus"></i>  Tratamiento
+    </a>
 
 </div>
 </div>
@@ -296,6 +299,39 @@ $evaluacion = mysql_fetch_array($sql); ?>
 </div>
 <!-- </div> -->
     <!--Aqui finaliza el detalle del diagnostico-->
+
+    <!--Aqui comienza el detalle del tratamiento-->
+    <?php
+    $tratamientos = mysql_query("select * from tratamiento where identidad='".$identidad."' ORDER BY `fecha` DESC");
+    // $tratamientos = mysql_fetch_array($sql); ?>
+<!-- <div class="container"> -->
+<div class="col-lg-12">
+    <div class="panel panel-warning">
+<div class="panel-heading"><h3><i class="fa fa-folder-open"></i>Histórico de tratamientos</h3>
+<!-- /.box-tools -->
+</div>
+
+<!-- /.box-header -->
+
+<div class="panel-body">
+  <dl>
+    <?php
+    while($tratamiento = mysql_fetch_array($tratamientos)){
+      ?>
+      <dt>Fecha:</dt>
+      <dd><?php echo $tratamiento['fecha']; ?></dd>
+        <dt>Tratamiento:</dt>
+        <dd><?php echo $tratamiento['tratamiento']; ?></dd>
+        <?php
+      }
+          ?>
+    </dl>
+</div>
+
+</div>
+</div>
+<!-- </div> -->
+    <!--Aqui finaliza el detalle del tratamiento-->
 
 <?php
 }

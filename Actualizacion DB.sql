@@ -68,3 +68,17 @@ WHERE
 ALTER TABLE `evaluaciones` DROP `ojo_izquierdo`;
 
 ALTER TABLE `evaluaciones` DROP `ojo_derecho`;
+
+
+--Añadir tabla de tratamientos
+
+CREATE TABLE `tratamiento` (
+  `id` bigint(20) NOT NULL,
+  `identidad` varchar(14) NOT NULL,
+  `tratamiento` varchar(200) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+ALTER TABLE `tratamiento` ADD PRIMARY KEY (`id`)
+ALTER TABLE `tratamiento` MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5
