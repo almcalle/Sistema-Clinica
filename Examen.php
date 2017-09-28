@@ -71,7 +71,7 @@ $registro = mysql_query("select * from ficha where identidad='".$buscar."'");
         <div class="col-lg-2">
 
           <label>PA:</label>
-          <input class="form-control" type="number" min="0" step="0.01" name="pa" maxlength="10" required="required" placeholder="70/100" onBlur="javascript:this.value=this.value.toUpperCase();"/>
+          <input class="form-control" type="text"  name="pa" maxlength="10" required="required" placeholder="70/100" onBlur="javascript:this.value=this.value.toUpperCase();"/>
         </div>
         <div class="col-lg-2">
           <label>FR (RPM):</label>

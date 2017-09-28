@@ -25,7 +25,6 @@ include 'inc/inicio.inc';
         <!-- AQUI SE DESPLEGARA NUESTRA TABLA DE CONSULTA -->
         <?php
         require 'php/conexion.php';
-        $id = $_POST['id'];
 
 
         $registro = mysql_query("SELECT DISTINCT * FROM ficha ") or die(mysql_error());
@@ -44,7 +43,7 @@ include 'inc/inicio.inc';
          <tbody>';
 
       while($registro2 = mysql_fetch_array($registro)){
-      
+
         echo'<tr>
                   <td>'.$registro2['identidad'].'</td>
                   <td>'.$registro2['nombre'].'</td>
