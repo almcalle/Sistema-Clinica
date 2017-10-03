@@ -3,14 +3,14 @@ require 'conexion.php';
 $usuario=$_POST['usuario'];
 $contrasena=$_POST['contrasena'];
 
-$resultado = mysql_query("select * from usuarios where usuario ='$usuario'");
-$fila = mysql_fetch_array($resultado);
+$resultado = mysqli_query($conn,"select * from usuarios where usuario ='$usuario'");
+$fila = mysqli_fetch_array($resultado);
 if ($fila['usuario']==$usuario) {
 	if ($fila['contrasena']==$contrasena) {
 		session_start();
 		$_SESSION['usuario'] = $usuario;
 		$_SESSION['id_usuario'] = $fila['identidad'];
-		mysql_close($conexion);
+		mysqli_close($conexion);
 		header("Location: ../menu.php");
 	}
 	else{

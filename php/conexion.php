@@ -1,6 +1,20 @@
 <?php
 #$conexion = mysql_connect("localhost","root","");
-$conexion = mysql_connect("localhost","root","");
+$user = 'root';
+$password = 'root';
+$db = 'clinica';
+$host = 'localhost';
+$port = 3306;
 
-mysql_select_db("clinica",$conexion) or die (header("Location: ../error505.php"));
+$link = mysqli_init();
+$success = mysqli_real_connect(
+   $link,
+   $host,
+   $user,
+   $password,
+   $db,
+   $port
+);
+$conn = mysqli_connect($host,$user,$password,$db);
+
 ?>

@@ -28,11 +28,12 @@ include 'inc/menu.inc';
                 <?php
                 require 'php/conexion.php';
                 //BUSCA NUMERO DE FICHAS
-                $consulta1 = mysql_query("select COUNT(*) from ficha");
-                $fichas=mysql_result($consulta1,0);
-                mysql_close($conexion);
+                $consulta1 = mysqli_query($conn,"select COUNT(*) AS CUENTA from ficha");
+                $rowFicha=mysqli_fetch_assoc($consulta1);
+                $numFichas=$rowFicha["CUENTA"];
+                mysqli_close($conexion);
                 ?>
-              		<h3><?php echo $fichas; ?></h3>
+              		<h3><?php echo $numFichas; ?></h3>
 
               		<p>Niños (a) registrados</p>
             		</div>
@@ -54,9 +55,9 @@ include 'inc/menu.inc';
                 <?php
                 require 'php/conexion.php';
                 //BUSCA NUMERO DE DIAGNOSTICOS
-                $consulta2 = mysql_query("select COUNT(*) from diagnosticos");
-                $diag=mysql_result($consulta2,0);
-                mysql_close($conexion);
+                $consulta2 = mysqli_query($conn,"select COUNT(*) from diagnosticos");
+                $diag=mysqli_fetch_assoc($consulta2);
+                mysqli_close($conexion);
                 ?>
               		<h3><?php echo $diag; ?></h3>
 
@@ -79,9 +80,9 @@ include 'inc/menu.inc';
                 <?php
                 require 'php/conexion.php';
                 //BUSCA NUMERO DE EXAMENES
-                $consulta2 = mysql_query("select COUNT(*) from examen");
-                $diag=mysql_result($consulta2,0);
-                mysql_close($conexion);
+                $consulta2 = mysqli_query($conn,"select COUNT(*) from examen");
+                $diag=mysqli_result($consulta2,0);
+                mysqli_close($conexion);
                 ?>
               		<h3><?php echo $diag; ?></h3>
 
@@ -104,9 +105,9 @@ include 'inc/menu.inc';
                 <?php
                 require 'php/conexion.php';
                 //BUSCA NUMERO DE ANAMNESIS
-                $consulta2 = mysql_query("select COUNT(*) from anamnesis");
-                $diag=mysql_result($consulta2,0);
-                mysql_close($conexion);
+                $consulta2 = mysqli_query($conn,"select COUNT(*) from anamnesis");
+                $diag=mysqli_result($consulta2,0);
+                mysqli_close($conexion);
                 ?>
               		<h3><?php echo $diag; ?></h3>
 
@@ -129,9 +130,9 @@ include 'inc/menu.inc';
                 <?php
                 require 'php/conexion.php';
                 //BUSCA NUMERO DE ANAMNESIS
-                $consulta2 = mysql_query("select COUNT(*) from evaluaciones");
-                $diag=mysql_result($consulta2,0);
-                mysql_close($conexion);
+                $consulta2 = mysqli_query($conn,"select COUNT(*) from evaluaciones");
+                $diag=mysqli_result($consulta2,0);
+                mysqli_close($conexion);
                 ?>
               		<h3><?php echo $diag; ?></h3>
 
